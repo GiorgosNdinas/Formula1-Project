@@ -1,5 +1,37 @@
 :host::ng-deep {
-  p-menubarsub{
-    margin-left: auto;
+  .p-menubar {
+    border: none;
+    border-radius: 0;
+    background: #151414;
+  }
+
+  .p-menubar ul {
+    background: #151414;
+  }
+
+  .p-menubar ul li a span {
+    color: white;
+  }
+
+  .p-menubar ul li:hover {
+    a span {
+      color: #151414;
+    }
+  }
+
+  // Menu bar logo
+  .p-menubar-start {
+    margin-left: 3%;
+  }
+
+  // Menu bar items
+  p-menubarsub {
+    width: 100%;
+  }
+
+  // Menu bar items
+  p-menubarsub ul {
+    float: right;
+    margin-right: 3%;
   }
 }
