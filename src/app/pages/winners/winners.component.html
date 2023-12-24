@@ -1,1 +1,35 @@
-<p>winners works!</p>
+
+<p-toolbar>
+  <div class="p-toolbar-group-start">
+    <h1>F1 winners</h1>
+  </div>
+  <div class="p-toolbar-group-end">
+    <app-selector></app-selector>
+  </div>
+</p-toolbar>
+
+
+
+@if (this.f1ApiService.f1Standings()) {
+<p-table [value]="this.f1ApiService.f1Standings()?.DriverStandings!" [tableStyle]="{'min-width': '50rem'}">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th>Position </th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Constructor</th>
+      <th>Points</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-driver>
+        <tr>
+          <td> {{driver.position}}</td>
+          <td> {{driver.Driver.givenName}}</td>
+          <td> {{driver.Driver.familyName}}</td>
+          <td> {{driver.Constructors[0].name}}</td>
+          <td> {{driver.points}}</td>
+        </tr>   
+  </ng-template>
+</p-table>
+
+}

@@ -1,5 +1,5 @@
 export interface F1RaceResults {
-  MRData: {
+  MRData?: {
     RaceTable: {
       Races: Races[],
       round: string,

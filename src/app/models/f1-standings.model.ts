@@ -1,5 +1,5 @@
 export interface F1Standings {
-  MRData: {
+  MRData?: {
     StandingsTable: {
       StandingsLists: StandingsLists[],
       season: string
@@ -14,9 +14,9 @@ export interface F1Standings {
 }
 
 export interface StandingsLists {
-  DriverStandings: DriverStandings[]
-  round: string,
-  season: string
+  DriverStandings?: DriverStandings[]
+  round?: string,
+  season?: string
 }
 
 export interface DriverStandings {

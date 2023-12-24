@@ -1,5 +1,5 @@
 export interface F1Rounds {
-  MRData: {
+  MRData?: {
     RaceTable: {
       Races: Races[],
       season: string
