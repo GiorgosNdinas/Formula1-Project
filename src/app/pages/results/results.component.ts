@@ -7,26 +7,27 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { CardModule } from 'primeng/card';
 import { TableModule } from 'primeng/table';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
+import { stringify } from 'querystring';
 
 
 
 @Component({
   selector: 'app-results',
   standalone: true,
-  imports: [ButtonModule, ToolbarModule, SelectorComponent, CardModule, TableModule, ProgressSpinnerModule],
+  imports: [ButtonModule, ToolbarModule, SelectorComponent, CardModule, TableModule, ProgressSpinnerModule, DropdownModule, FormsModule],
   templateUrl: './results.component.html',
   styleUrl: './results.component.scss'
 })
 export class ResultsComponent {
-
-
-
+  selectedRound = this.f1ApiService.selectedRound();
   constructor(public f1ApiService: F1ApiService) { 
   }
 
-  changeSeason(){
-    // Increment the count by 1.
-    this.f1ApiService.selectedSeason.update(value => '2022');
+  changeSeason(event: any){
+    console.log('Here', this.f1ApiService.f1Rounds()?.MRData?.RaceTable.Races);
+    this.f1ApiService.selectedRound.set(String(event.value.round));
   }
 
 }

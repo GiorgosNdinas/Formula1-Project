@@ -36,6 +36,10 @@ export class F1ApiService {
 
       this.http.get<F1Rounds>(`${this.baseUrl}/${this.selectedSeason()}.json`).subscribe(result => {
         this.f1Rounds.set(result);
+        // Here we check if the selected round is out of the new round scope
+        if(result.MRData?.RaceTable.Races)
+          if(Number(this.selectedRound()) > result.MRData?.RaceTable.Races.length)
+            this.selectedRound.set('1');
       });
       this.http.get<F1RaceResults>(`${this.baseUrl}/${this.selectedSeason()}/${this.selectedRound()}/results.json`).subscribe(result => {
         this.f1RaceResults.set(result);
