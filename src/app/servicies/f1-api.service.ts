@@ -16,6 +16,10 @@ export class F1ApiService {
   public selectedSeason = signal<string>('2023');
   public selectedRound = signal<string>('1');
 
+  // Flags for when data are loading
+  public winnersAreLoading: boolean = false;
+  public resultsAreLoading: boolean = false;
+
   // A signal to get all f1 seasons
   public f1Seasons: Signal<F1Seasons | undefined> = toSignal<F1Seasons>(this.http.get<F1Seasons>(`${this.baseUrl}/seasons.json?limit=200`));
   // A signal to get the F1 rounds for a specific season
@@ -27,14 +31,19 @@ export class F1ApiService {
 
   constructor(private http: HttpClient) {
     effect(() => {
+      this.winnersAreLoading = true;
+      this.resultsAreLoading = true;
+
       this.http.get<F1Rounds>(`${this.baseUrl}/${this.selectedSeason()}.json`).subscribe(result => {
         this.f1Rounds.set(result);
       });
       this.http.get<F1RaceResults>(`${this.baseUrl}/${this.selectedSeason()}/${this.selectedRound()}/results.json`).subscribe(result => {
         this.f1RaceResults.set(result);
+        this.resultsAreLoading = false
       });
       this.http.get<F1Standings>(`${this.baseUrl}/${this.selectedSeason()}/driverStandings.json`).subscribe(result => {
         this.f1Standings.set(result.MRData?.StandingsTable.StandingsLists[0]);
+        this.winnersAreLoading = false;
       })
     }, { allowSignalWrites: true });
   }

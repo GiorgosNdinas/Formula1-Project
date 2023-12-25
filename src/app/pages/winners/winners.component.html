@@ -1,5 +1,4 @@
-
-<p-toolbar>
+<p-toolbar [class.table-container-blur]="this.f1ApiService.winnersAreLoading">
   <div class="p-toolbar-group-start">
     <h1>F1 winners</h1>
   </div>
@@ -11,8 +10,17 @@
 
 
 @if (this.f1ApiService.f1Standings()) {
-<p-table [value]="this.f1ApiService.f1Standings()?.DriverStandings!" [tableStyle]="{'min-width': '50rem'}">
+<p-table [value]="this.f1ApiService.f1Standings()?.DriverStandings!" [tableStyle]="{'min-width': '50rem'}" [class.table-container-blur]="this.f1ApiService.winnersAreLoading"
+  class="table-container">
+  <!-- Spinner animation  -->
+   
   <ng-template pTemplate="header" let-columns>
+    @if (this.f1ApiService.winnersAreLoading) {
+      <div class="card flex justify-content-center" class="spinner-container">
+        <p-progressSpinner styleClass="w-4rem h-4rem" strokeWidth="8" fill="var(--surface-ground)"
+          animationDuration=".5s"></p-progressSpinner>
+      </div>
+    }
     <tr>
       <th>Position </th>
       <th>Name</th>
@@ -22,13 +30,13 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-driver>
-        <tr>
-          <td> {{driver.position}}</td>
-          <td> {{driver.Driver.givenName}}</td>
-          <td> {{driver.Driver.familyName}}</td>
-          <td> {{driver.Constructors[0].name}}</td>
-          <td> {{driver.points}}</td>
-        </tr>   
+    <tr>
+      <td> {{driver.position}}</td>
+      <td> {{driver.Driver.givenName}}</td>
+      <td> {{driver.Driver.familyName}}</td>
+      <td> {{driver.Constructors[0].name}}</td>
+      <td> {{driver.points}}</td>
+    </tr>
   </ng-template>
 </p-table>
 

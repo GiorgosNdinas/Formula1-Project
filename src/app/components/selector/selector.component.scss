@@ -1,0 +1,65 @@
+.selector-container {
+  text-align: center;
+}
+
+label {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 90px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.select-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666;
+}
+
+/* Style for the arrow in the dropdown */
+.custom-select::after {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+/* Style for the arrow when dropdown is open */
+.custom-select.open::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Style for the dropdown options */
+select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+}
+
+/* Style for the selected option */
+select option:checked {
+    background-color: #007BFF;
+    color: #fff;
+} 

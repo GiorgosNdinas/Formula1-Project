@@ -1,0 +1,21 @@
+:host::ng-deep{
+  .p-toolbar {
+    padding: 0 20px;
+  }
+}
+
+.container{
+  position: relative;
+}
+
+.spinner-container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.table-container-blur{
+  filter: blur(3px); /* Adjust the blur amount as needed */
+  transition: filter 0.5s ease; /* Add a smooth transition effect */
+}
