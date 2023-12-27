@@ -22,6 +22,6 @@ export class SelectorComponent {
  
   // Method to handle the selection change event
   onSeasonSelected(event: any): void {
-    this.f1ApiService.selectedSeason.set(event.target.value)
+    this.f1ApiService.selectedSeason.set(event.value.season);
   }
 }

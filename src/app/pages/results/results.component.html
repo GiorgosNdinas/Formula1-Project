@@ -1,4 +1,4 @@
-<p-toolbar [class.table-container-blur]="this.f1ApiService.resultsAreLoading">
+<p-toolbar>
   <div class="p-toolbar-group-start">
     <h1>Race results</h1>
   </div>
@@ -7,52 +7,24 @@
   </div>
 </p-toolbar>
 
-
-<div class="card flex justify-content-center" [class.table-container-blur]="this.f1ApiService.resultsAreLoading">
-  <p-card>
-    Round:
-    @if(this.selectedRound){
-      <p-dropdown [options]="this.f1ApiService.f1Rounds()?.MRData?.RaceTable?.Races"
-      [(ngModel)]="this.selectedRound" optionLabel="round" (onChange)="changeSeason($event)">
-      <ng-template pTemplate="selectedItem">
-        <div class="flex align-items-center gap-2">
-            <div>{{ this.f1ApiService.selectedRound() }}</div>
-        </div>
-    </ng-template>
-      <ng-template let-round pTemplate="item">
-        <div class="flex align-items-center gap-2">
-          <div>{{ round.round }}</div>
-        </div>
-      </ng-template>
-    </p-dropdown>
-    }
-
-    /{{this.f1ApiService.f1Rounds()?.MRData?.RaceTable?.Races?.length}} <br>
-    Circuit name:
-    @for (race of this.f1ApiService.f1Rounds()?.MRData?.RaceTable?.Races; track $index) {
-    @if (race.round === this.f1ApiService.selectedRound()) {
-    {{race.raceName}} <br>
-    {{race.Circuit.Location.country}} <br>
-    {{race.date}} <br>
-    {{race.url}} <br>
-    {{race.Circuit.Location.locality}}
-    }
-    }
-  </p-card>
+<div class="card">
+  <app-round-template></app-round-template>
 </div>
-
-<!-- Spinner animation  -->
-@if (this.f1ApiService.resultsAreLoading) {
-<div class="card flex justify-content-center" class="spinner-container">
-  <p-progressSpinner styleClass="w-4rem h-4rem" strokeWidth="8" fill="var(--surface-ground)"
-    animationDuration=".5s"></p-progressSpinner>
-</div>
-}
 
 <!-- Table -->
 @if(this.f1ApiService.f1RaceResults()){
 <div class="card" [class.table-container-blur]="this.f1ApiService.resultsAreLoading">
-  <p-table [value]="this.f1ApiService.f1RaceResults()?.MRData?.RaceTable?.Races!"
+  <!-- Spinner animation  -->
+  @if (this.f1ApiService.resultsAreLoading) {
+    <div class="card flex justify-content-center" class="spinner-container">
+      <p-progressSpinner styleClass="w-4rem h-4rem" strokeWidth="8" fill="var(--surface-ground)"
+        animationDuration=".5s"></p-progressSpinner>
+    </div>
+    }
+  <p-table [value]="this.races()!"
+    [paginator]="true"
+    [rows]="5"
+    [showCurrentPageReport]="true"
     [tableStyle]="{ 'min-width': '50rem' }"
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[5, 10, 20]">
     <ng-template pTemplate="header">
@@ -65,15 +37,13 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-race let-index=" race.Results.length">
-      @for (results of race.Results; track $index) {
       <tr>
-        <td>{{ results.position }}</td>
-        <td>{{ results.Driver.givenName }}</td>
-        <td>{{ results.Driver.familyName }}</td>
-        <td>{{ results.Constructor.name }}</td>
-        <td>{{ results.points }}</td>
+        <td>{{ race.position }}</td>
+        <td>{{ race.Driver.givenName }}</td>
+        <td>{{ race.Driver.familyName }}</td>
+        <td>{{ race.Constructor.name }}</td>
+        <td>{{ race.points }}</td>
       </tr>
-      }
     </ng-template>
     <ng-template pTemplate="paginatorleft">
       <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>

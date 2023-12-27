@@ -10,7 +10,12 @@
 
 
 @if (this.f1ApiService.f1Standings()) {
-<p-table [value]="this.f1ApiService.f1Standings()?.DriverStandings!" [tableStyle]="{'min-width': '50rem'}" [class.table-container-blur]="this.f1ApiService.winnersAreLoading"
+<p-table [value]="this.f1ApiService.f1Standings()?.DriverStandings!" 
+  [paginator]="true"
+  [rows]="10"
+  [showCurrentPageReport]="true"
+  [tableStyle]="{'min-width': '50rem'}" 
+  [class.table-container-blur]="this.f1ApiService.winnersAreLoading"
   class="table-container">
   <!-- Spinner animation  -->
    

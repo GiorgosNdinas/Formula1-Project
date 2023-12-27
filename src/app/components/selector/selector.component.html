@@ -1,13 +1,15 @@
-@if(this.f1ApiService.selectedSeason()) {
-<div class="selector-container">
-    <label for="options">Select a season:</label>
-    <div class="custom-select">
-      <select [(ngModel)]="this.selectedSeason" (change)="onSeasonSelected($event)" id="options" name="options">
-        @for(season of this.seasons; track $index){
-        <option [value]="season.season">{{season.season}}</option>
-        }
-      </select>
-      <div class="select-icon">&#9660;</div>
+@if(this.selectedSeason){
+  <p-dropdown [options]="this.seasons"
+  [(ngModel)]="this.selectedSeason" optionLabel="season" (onChange)="onSeasonSelected($event)">
+  <ng-template pTemplate="selectedItem">
+    <div class="flex align-items-center gap-2">
+        <div>{{ this.f1ApiService.selectedSeason() }}</div>
     </div>
-  </div>
+</ng-template>
+  <ng-template let-season pTemplate="item">
+    <div class="flex align-items-center gap-2">
+      <div>{{ season.season }}</div>
+    </div>
+  </ng-template>
+</p-dropdown>
 }

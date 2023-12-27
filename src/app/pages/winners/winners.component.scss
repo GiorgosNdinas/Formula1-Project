@@ -1,6 +1,9 @@
 :host::ng-deep{
   .p-toolbar {
     padding: 0 20px;
+    border: none;
+    border-bottom: solid 1px;
+    border-radius: 0;
   }
 }
 

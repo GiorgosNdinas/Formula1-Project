@@ -1,20 +1,35 @@
 :host::ng-deep{
   .p-toolbar {
     padding: 0 20px;
+    border: none;
+    border-radius: 0;
+  }
+  // Css  for the round-selector component
+  .p-panel-header{
+    padding-bottom: 5px;
+  }
+  .p-panel-header, .p-panel-content {
+    background: #151414;
+    color: white;
+    border-radius: 0;
+    border: none;
   }
 
-  .p-element .p-inputwrapper .p-inputwrapper-filled span{
-    padding: 5px;
+  .p-panel-content h2 {
+    font-weight: 400;
   }
+  // .p-element .p-inputwrapper .p-inputwrapper-filled span {
+  //   padding: 5px;      
+  // }
 }
 
-.container{
+.card{
   position: relative;
 }
 
 .spinner-container {
   position: absolute;
-  top: 20%;
+  top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
 }
