@@ -48,7 +48,7 @@ export class F1ApiService {
       this.http.get<F1Standings>(`${this.baseUrl}/${this.selectedSeason()}/driverStandings.json`).subscribe(result => {
         this.f1Standings.set(result.MRData?.StandingsTable.StandingsLists[0]);
         this.winnersAreLoading = false;
-      })
+      });
     }, { allowSignalWrites: true });
   }
 }

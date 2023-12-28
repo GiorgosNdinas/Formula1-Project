@@ -6,7 +6,15 @@ import { MenubarModule } from 'primeng/menubar';
     selector: 'app-navbar',
     standalone: true,
     imports: [MenubarModule],
-    templateUrl: './navbar.component.html',
+    template: `
+        <p-menubar [model]="items" class="menubar-items">
+            <ng-template pTemplate="start">
+                <a [routerLink]="['/']">
+                <img src="assets/F1.png" height="40" class="mr-2" />
+                </a>
+            </ng-template>
+        </p-menubar>
+    `,
     styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {

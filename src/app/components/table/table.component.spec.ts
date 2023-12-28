@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SeasonSelectorComponent } from './season-selector.component';
+import { TableComponent } from './table.component';
 
-describe('SelectorComponent', () => {
-  let component: SeasonSelectorComponent;
-  let fixture: ComponentFixture<SeasonSelectorComponent>;
+describe('TableComponent', () => {
+  let component: TableComponent;
+  let fixture: ComponentFixture<TableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SeasonSelectorComponent]
+      imports: [TableComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SeasonSelectorComponent);
+    fixture = TestBed.createComponent(TableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
