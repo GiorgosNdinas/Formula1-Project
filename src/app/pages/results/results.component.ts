@@ -113,9 +113,9 @@ export class RoundTemplateComponent {
 
 
 @Component({
-    selector: 'app-results',
-    standalone: true,
-    template: `
+  selector: 'app-results',
+  standalone: true,
+  template: `
       <!-- Toolbar section for displaying race results -->
       <p-toolbar [class.table-container-blur]="this.f1ApiService.resultsAreLoading">
         <!-- Left-aligned group in the toolbar -->
@@ -125,6 +125,7 @@ export class RoundTemplateComponent {
         </div>
         <!-- Right-aligned group in the toolbar -->
         <div class="p-toolbar-group-end">
+          <h3 style="font-weight: 500; margin-right: 10px;">Select season:</h3>
           <!-- Custom component for selecting the season -->
           <app-season-selector></app-season-selector>
         </div>
@@ -151,8 +152,8 @@ export class RoundTemplateComponent {
         </div>
       }
     `,
-    styleUrl: './results.component.scss',
-    imports: [ToolbarModule, ProgressSpinnerModule, RoundTemplateComponent, TableComponent, SeasonSelectorComponent]
+  styleUrl: './results.component.scss',
+  imports: [ToolbarModule, ProgressSpinnerModule, RoundTemplateComponent, TableComponent, SeasonSelectorComponent]
 })
 export class ResultsComponent {
   constructor(public f1ApiService: F1ApiService) {

@@ -1,8 +1,7 @@
-:host::ng-deep{
+:host::ng-deep {
   .p-toolbar {
     padding: 0 20px;
     border: none;
-    border-bottom: solid 1px;
     border-radius: 0;
   }
 }
@@ -15,7 +14,9 @@
   transform: translate(-50%, -50%);
 }
 
-.table-container-blur{
-  filter: blur(3px); /* Adjust the blur amount as needed */
-  transition: filter 0.5s ease; /* Add a smooth transition effect */
+.table-container-blur {
+  filter: blur(3px);
+  /* Adjust the blur amount as needed */
+  transition: filter 0.5s ease;
+  /* Add a smooth transition effect */
 }

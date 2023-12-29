@@ -11,14 +11,15 @@ import { Results } from '../../models/f1-race-results.model';
   standalone: true,
   imports: [TableModule, ButtonModule],
   template: `
-      <!-- Common part for both 'results' and 'winners' -->
+    @if(this.races() && this.f1ApiService.f1Standings()?.DriverStandings){
+        <!-- Common part for both 'results' and 'winners' -->
     <div class="card" [class.table-container-blur]="this.f1ApiService.resultsAreLoading || this.f1ApiService.winnersAreLoading">
       <p-table
         [paginator]="true"
         [rows]="(this.tableFor === 'results') ? 5 : 10"
         [showCurrentPageReport]="true"
         [tableStyle]="{'min-width': '50rem'}"
-        [value]="(this.tableFor === 'results') ? this.races()! : this.f1ApiService.f1Standings()?.DriverStandings!"
+        [value]="(this.tableFor === 'results') ? this.races()! : this.f1ApiService.f1Standings()?.DriverStandings!.slice(3, this.f1ApiService.f1Standings()?.DriverStandings!.length)"
         class="table-container">
 
         <!-- Header template for the table columns -->
@@ -52,6 +53,7 @@ import { Results } from '../../models/f1-race-results.model';
         </ng-template>
       </p-table>
     </div>
+    }
   `,
   styleUrl: './table.component.scss'
 })
