@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed } from '@angular/core';
 
 
 import { DropdownModule } from 'primeng/dropdown';
@@ -11,7 +11,7 @@ import { F1ApiService } from '../../servicies/f1-api.service';
   imports: [DropdownModule, FormsModule],
   template: `
     @if(this.selectedSeason){
-      <p-dropdown [options]="this.seasons"
+      <p-dropdown [options]="this.seasons()?.reverse()"
         [(ngModel)]="this.selectedSeason" optionLabel="season" (onChange)="onSeasonSelected($event)">
         <ng-template pTemplate="selectedItem">
           <div class="flex align-items-center gap-2">
@@ -28,7 +28,9 @@ import { F1ApiService } from '../../servicies/f1-api.service';
   `
 })
 export class SeasonSelectorComponent {
-  seasons = this.f1ApiService.f1Seasons()?.MRData.SeasonTable.Seasons.reverse();
+  seasons = computed(() => {
+    return this.f1ApiService.f1Seasons()?.MRData.SeasonTable.Seasons;
+  });
 
   selectedSeason = this.f1ApiService.selectedSeason();
 

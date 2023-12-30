@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <source src="assets/Home page video.mp4" type="video/mp4">
     </video>
     <div class="content">
-      <h1>Formula 1</h1>
+      <h1><a href="https://www.formula1.com/" target="_blank">Formula 1</a></h1>
     </div>
   </div>
   `,
@@ -40,10 +40,16 @@ import { Component } from '@angular/core';
       text-align: center;
     }
 
-    .content h1 {
+    .content h1 a {
       font-size: 6vw;
       color: #fff;
       font-weight: 600;
+      text-decoration: none;
+    }
+
+    .content h1 a:hover {
+      color: #ee0000;
+      cursor: pointer;
     }
 
     @media (max-width: 767px) {

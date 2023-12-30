@@ -60,6 +60,8 @@ import { TableComponent } from "../../components/table/table.component";
       align-items: end;
       justify-content: space-around;
       height: 60vh;
+      border-left-width: 0px;
+      border-right-width: 0px;
     }
 
     .first-place,
@@ -70,6 +72,7 @@ import { TableComponent } from "../../components/table/table.component";
       justify-content: space-between;
       flex-direction: column;
       border: 1px solid;
+      border-radius: 15px;
       width: 30%;
       max-width: 400px;
       margin-top: 15px;
