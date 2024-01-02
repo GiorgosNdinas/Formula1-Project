@@ -38,11 +38,6 @@ export class NavbarComponent {
                 label: 'Winners',
                 routerLink: 'winners',
                 icon: 'pi pi-fw pi-user'
-            },
-            {
-                label: 'Contact',
-                routerLink: 'contact',
-                icon: 'pi pi-fw pi-calendar'
             }
         ];
     }

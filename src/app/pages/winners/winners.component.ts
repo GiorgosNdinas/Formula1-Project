@@ -74,7 +74,7 @@ import { TableComponent } from "../../components/table/table.component";
       border: 1px solid;
       border-radius: 15px;
       width: 30%;
-      max-width: 400px;
+      max-width: 300px;
       margin-top: 15px;
       margin-bottom: 5px;
       text-align: center;
@@ -96,16 +96,21 @@ import { TableComponent } from "../../components/table/table.component";
       height: 200px;
     }
 
+    .driver-info {
+      margin: auto;
+    }
+
     .driver-info h1{
       font-weight: 300;
-      font-size: 25px;
+      font-size: 22px;
       margin-bottom: 0px;
     }
 
     .driver-info h2 {
       font-weight: 300;
-      font-size: 20px;
-      margin-bottom: 5px;
+      font-size: 15px;
+      margin-top: 0px;
+      margin-bottom: 0px;
     }
 
     .driver-info h3 {
@@ -114,20 +119,24 @@ import { TableComponent } from "../../components/table/table.component";
       margin-top: 5px;
     }
 
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 750px) {
+      .driver-img {
+        margin: auto;
+      }
       .driver-img img {
         height: 130px;
       }
     }
+
   `
 })
 export class SeasonPodiumComponent {
-  
-  constructor(public f1ApiService: F1ApiService){
+
+  constructor(public f1ApiService: F1ApiService) {
   }
 
   // Returns the path of the driver image
-  getDriverImg(name: string): string{
+  getDriverImg(name: string): string {
     return `assets/drivers/${name}.webp`;
   }
 

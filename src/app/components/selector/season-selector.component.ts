@@ -12,7 +12,7 @@ import { F1ApiService } from '../../servicies/f1-api.service';
   template: `
     @if(this.selectedSeason){
       <p-dropdown [options]="this.seasons()?.reverse()"
-        [(ngModel)]="this.selectedSeason" optionLabel="season" (onChange)="onSeasonSelected($event)">
+        [(ngModel)]="this.selectedSeason" optionLabel="season" (onChange)="onSeasonSelected($event)" [disabled]="this.f1ApiService.resultsAreLoading && this.f1ApiService.winnersAreLoading">
         <ng-template pTemplate="selectedItem">
           <div class="flex align-items-center gap-2">
             <div>{{ this.f1ApiService.selectedSeason() }}</div>

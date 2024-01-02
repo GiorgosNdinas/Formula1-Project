@@ -18,7 +18,7 @@ import { PanelModule } from 'primeng/panel';
   imports: [DropdownModule, FormsModule],
   template: `
   <p-dropdown [options]="this.f1ApiService.f1Rounds()?.MRData?.RaceTable?.Races"
-  [(ngModel)]="this.selectedRound" optionLabel="round" (onChange)="changeSeason($event)">
+  [(ngModel)]="this.selectedRound" optionLabel="round" (onChange)="changeSeason($event)" [disabled]="this.f1ApiService.resultsAreLoading">
     <ng-template pTemplate="selectedItem">
       <div class="flex align-items-center gap-2">
           <div>{{ this.f1ApiService.selectedRound() }}</div>
