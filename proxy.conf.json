@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://ergast.com/api",
+    "target": "https://api.jolpi.ca/ergast",
     "secure": false,
     "changeOrigin": true,
     "pathRewrite": {

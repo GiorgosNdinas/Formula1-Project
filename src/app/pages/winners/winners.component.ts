@@ -121,7 +121,7 @@ import { TableComponent } from "../../components/table/table.component";
 
     h3 {
       font-weight: 400;
-      color: #d0d0d0;
+      color: black;
       margin-bottom: 0.5rem;
     }
 
@@ -130,7 +130,7 @@ import { TableComponent } from "../../components/table/table.component";
       justify-content: center;
       gap: 1.2rem;
       font-size: 0.9rem;
-      color: #bbb;
+      color: black;
     }
   }
 }
@@ -162,6 +162,16 @@ import { TableComponent } from "../../components/table/table.component";
   .podium-place {
     transform: none !important;
     max-width: 90%;
+  }
+
+  .first {
+    order: 1;
+  }
+  .second {
+    order: 2;
+  }
+  .third {
+    order: 3;
   }
 }
 

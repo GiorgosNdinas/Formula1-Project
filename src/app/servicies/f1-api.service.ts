@@ -14,8 +14,7 @@ export class F1ApiService {
   private baseUrl = '/api/f1';
   private currentYear: number = new Date().getFullYear();
 
-  // public selectedSeason = signal<string>(this.currentYear.toString());
-  public selectedSeason = signal<string>('2022');
+  public selectedSeason = signal<string>(this.currentYear.toString());
   public selectedRound = signal<string>('1');
 
   // Flags for when data are loading
