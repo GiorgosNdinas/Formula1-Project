@@ -98,6 +98,14 @@ export class RoundSelectorComponent {
       justify-content: space-between;
       font-size: 10px;
     }
+
+    @media (max-width: 850px) {
+      .grand-prix-info {
+        font-size: 8px;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
   `
 })
 export class RoundTemplateComponent {
