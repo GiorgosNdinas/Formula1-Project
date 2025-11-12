@@ -11,7 +11,7 @@ import { F1ApiService } from '../../servicies/f1-api.service';
   imports: [DropdownModule, FormsModule],
   template: `
     @if(this.selectedSeason){
-      <p-dropdown [options]="this.seasons()?.reverse()"
+      <p-dropdown [options]="this.seasons()"
         [(ngModel)]="this.selectedSeason" optionLabel="season" (onChange)="onSeasonSelected($event)" [disabled]="this.f1ApiService.resultsAreLoading && this.f1ApiService.winnersAreLoading">
         <ng-template pTemplate="selectedItem">
           <div class="flex align-items-center gap-2">
@@ -29,7 +29,11 @@ import { F1ApiService } from '../../servicies/f1-api.service';
 })
 export class SeasonSelectorComponent {
   seasons = computed(() => {
-    return this.f1ApiService.f1Seasons()?.MRData.SeasonTable.Seasons;
+
+    // Get the original array, or an empty array if null/undefined
+    const originalSeasons = this.f1ApiService.f1Seasons()?.MRData.SeasonTable.Seasons || [];
+
+    return [...originalSeasons].reverse(); 
   });
 
   selectedSeason = this.f1ApiService.selectedSeason();
