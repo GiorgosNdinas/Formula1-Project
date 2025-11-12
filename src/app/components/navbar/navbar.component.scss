@@ -34,4 +34,17 @@
     float: right;
     margin-right: 3%;
   }
+
+  // Media query for responsiveness for the burger menu
+  @media(max-width: 850px) {
+
+    p-menubarsub.p-element,
+    .p-menubar-end {
+      display: none;
+    }
+
+    div.p-menubar.p-component{
+      justify-content: space-between;
+    }
+  }
 }
