@@ -12,8 +12,10 @@ import { DriverStandings, F1Standings, StandingsLists } from '../models/f1-stand
 export class F1ApiService {
   // API base URL
   private baseUrl = '/api/f1';
+  private currentYear: number = new Date().getFullYear();
 
-  public selectedSeason = signal<string>('2023');
+  // public selectedSeason = signal<string>(this.currentYear.toString());
+  public selectedSeason = signal<string>('2022');
   public selectedRound = signal<string>('1');
 
   // Flags for when data are loading

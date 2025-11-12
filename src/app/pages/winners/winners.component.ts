@@ -13,120 +13,158 @@ import { TableComponent } from "../../components/table/table.component";
   standalone: true,
   imports: [],
   template: `
-    @if(this.f1ApiService.f1Standings()?.DriverStandings){
-      <div class="container">
-        <div class="second-place">
-          <div class="driver-img">
-            <img [src]="this.getDriverImg(this.f1ApiService.f1Standings()?.DriverStandings![1].Driver.familyName)" (error)="handleMissingImage($event)" alt="2nd place">
-          </div>
-          <div class="driver-info">
-            <h1>2. {{this.f1ApiService.f1Standings()?.DriverStandings![1].Driver.givenName}} {{this.f1ApiService.f1Standings()?.DriverStandings![1].Driver.familyName}} </h1>
-            <h3>{{this.f1ApiService.f1Standings()?.DriverStandings![1].Constructors[0].name}}</h3>
-            <h2>Points: {{this.f1ApiService.f1Standings()?.DriverStandings![1].points}}</h2>
-            <h2>Wins: {{this.f1ApiService.f1Standings()?.DriverStandings![1].wins}}</h2>
-          </div>
-        </div>
-        <div class="first-place">
-          <div class="driver-img">
-            <img [src]="this.getDriverImg(this.f1ApiService.f1Standings()?.DriverStandings![0].Driver.familyName)"  (error)="handleMissingImage($event)" alt="1st place">
-          </div>
-          <div class="driver-info">
-            <h1>1. {{this.f1ApiService.f1Standings()?.DriverStandings![0].Driver.givenName}} {{this.f1ApiService.f1Standings()?.DriverStandings![0].Driver.familyName}}</h1>
-            <h3>{{this.f1ApiService.f1Standings()?.DriverStandings![0].Constructors[0].name}}</h3>
-            <h2>Points: {{this.f1ApiService.f1Standings()?.DriverStandings![0].points}}</h2>
-            <h2>Wins: {{this.f1ApiService.f1Standings()?.DriverStandings![0].wins}}</h2>
-          </div>
-        </div>
-        <div class="third-place">
+  @if (this.f1ApiService.f1Standings()?.DriverStandings) {
+  <div class="podium-container">
+    <div class="podium">
+      <!-- SECOND PLACE -->
+      <div class="podium-place second">
         <div class="driver-img">
-          <img [src]="this.getDriverImg(this.f1ApiService.f1Standings()?.DriverStandings![2].Driver.familyName)" (error)="handleMissingImage($event)" alt="3rd place">
+          <img [src]="this.getDriverImg(this.f1ApiService.f1Standings()?.DriverStandings![1].Driver.familyName)" 
+               (error)="handleMissingImage($event)" alt="2nd place" />
         </div>
         <div class="driver-info">
-            <h1>3. {{this.f1ApiService.f1Standings()?.DriverStandings![2].Driver.givenName}} {{this.f1ApiService.f1Standings()?.DriverStandings![2].Driver.familyName}} </h1>
-            <h3>{{this.f1ApiService.f1Standings()?.DriverStandings![2].Constructors[0].name}}</h3>          
-            <h2>Points: {{this.f1ApiService.f1Standings()?.DriverStandings![2].points}}</h2>
-            <h2>Wins: {{this.f1ApiService.f1Standings()?.DriverStandings![2].wins}}</h2>
+          <h1>2. {{this.f1ApiService.f1Standings()?.DriverStandings![1].Driver.givenName}} {{this.f1ApiService.f1Standings()?.DriverStandings![1].Driver.familyName}}</h1>
+          <h3>{{this.f1ApiService.f1Standings()?.DriverStandings![1].Constructors[0].name}}</h3>
+          <div class="stats">
+            <span>Points: {{this.f1ApiService.f1Standings()?.DriverStandings![1].points}}</span>
+            <span>Wins: {{this.f1ApiService.f1Standings()?.DriverStandings![1].wins}}</span>
           </div>
         </div>
-      </div>  
-    }
+      </div>
+
+      <!-- FIRST PLACE -->
+      <div class="podium-place first">
+        <div class="driver-img">
+          <img [src]="this.getDriverImg(this.f1ApiService.f1Standings()?.DriverStandings![0].Driver.familyName)" 
+               (error)="handleMissingImage($event)" alt="1st place" />
+        </div>
+        <div class="driver-info">
+          <h1>1. {{this.f1ApiService.f1Standings()?.DriverStandings![0].Driver.givenName}} {{this.f1ApiService.f1Standings()?.DriverStandings![0].Driver.familyName}}</h1>
+          <h3>{{this.f1ApiService.f1Standings()?.DriverStandings![0].Constructors[0].name}}</h3>
+          <div class="stats">
+            <span>Points: {{this.f1ApiService.f1Standings()?.DriverStandings![0].points}}</span>
+            <span>Wins: {{this.f1ApiService.f1Standings()?.DriverStandings![0].wins}}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- THIRD PLACE -->
+      <div class="podium-place third">
+        <div class="driver-img">
+          <img [src]="this.getDriverImg(this.f1ApiService.f1Standings()?.DriverStandings![2].Driver.familyName)" 
+               (error)="handleMissingImage($event)" alt="3rd place" />
+        </div>
+        <div class="driver-info">
+          <h1>3. {{this.f1ApiService.f1Standings()?.DriverStandings![2].Driver.givenName}} {{this.f1ApiService.f1Standings()?.DriverStandings![2].Driver.familyName}}</h1>
+          <h3>{{this.f1ApiService.f1Standings()?.DriverStandings![2].Constructors[0].name}}</h3>
+          <div class="stats">
+            <span>Points: {{this.f1ApiService.f1Standings()?.DriverStandings![2].points}}</span>
+            <span>Wins: {{this.f1ApiService.f1Standings()?.DriverStandings![2].wins}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+
   `,
   styles: `
-    .container {
-      background: black;
-      color: white;
-      border: 1px solid;
+.podium-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 70vh;
+  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+  color: white;
+}
+
+.podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.podium-place {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1rem;
+  flex: 1 1 250px;
+  max-width: 300px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  }
+
+  .driver-img img {
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+
+  .driver-info {
+    margin-top: 0.75rem;
+
+    h1 {
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    h3 {
+      font-weight: 400;
+      color: #d0d0d0;
+      margin-bottom: 0.5rem;
+    }
+
+    .stats {
       display: flex;
-      align-items: end;
-      justify-content: space-around;
-      height: 60vh;
-      border-left-width: 0px;
-      border-right-width: 0px;
+      justify-content: center;
+      gap: 1.2rem;
+      font-size: 0.9rem;
+      color: #bbb;
     }
+  }
+}
 
-    .first-place,
-    .second-place,
-    .third-place {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-direction: column;
-      border: 1px solid;
-      border-radius: 15px;
-      width: 30%;
-      max-width: 300px;
-      margin-top: 15px;
-      margin-bottom: 5px;
-      text-align: center;
-    }
+/* Podium level adjustments */
+.first {
+  order: 2;
+  transform: translateY(-20px);
+  background: linear-gradient(145deg, #f6d365, #fda085);
+}
 
-    .first-place {
-      height: 95%;
-    }
+.second {
+  order: 1;
+  background: linear-gradient(145deg, #cfd9df, #e2ebf0);
+}
 
-    .second-place {
-      height: 90%;
-    }
+.third {
+  order: 3;
+  background: linear-gradient(145deg, #f3a683, #f7d794);
+}
 
-    .third-place {
-      height: 85%;
-    }
+/* Responsive */
+@media (max-width: 850px) {
+  .podium {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .driver-img img {
-      height: 200px;
-    }
+  .podium-place {
+    transform: none !important;
+    max-width: 90%;
+  }
+}
 
-    .driver-info {
-      margin: auto;
-    }
-
-    .driver-info h1{
-      font-weight: 300;
-      font-size: 22px;
-      margin-bottom: 0px;
-    }
-
-    .driver-info h2 {
-      font-weight: 300;
-      font-size: 15px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-
-    .driver-info h3 {
-      font-weight: 200;
-      font-size: 15px;
-      margin-top: 5px;
-    }
-
-    @media only screen and (max-width: 750px) {
-      .driver-img {
-        margin: auto;
-      }
-      .driver-img img {
-        height: 130px;
-      }
-    }
 
   `
 })
