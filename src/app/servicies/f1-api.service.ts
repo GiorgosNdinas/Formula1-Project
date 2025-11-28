@@ -11,8 +11,9 @@ import { DriverStandings, F1Standings, StandingsLists } from '../models/f1-stand
 })
 export class F1ApiService {
   // API base URL
-  private baseUrl = '/api/f1';
+  private baseUrl = 'https://api.jolpi.ca/ergast/f1';
   private currentYear: number = new Date().getFullYear();
+  
 
   public selectedSeason = signal<string>(this.currentYear.toString());
   public selectedRound = signal<string>('1');
