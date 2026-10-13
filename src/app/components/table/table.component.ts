@@ -11,14 +11,14 @@ import { Results } from '../../models/f1-race-results.model';
   standalone: true,
   imports: [TableModule, ButtonModule],
   template: `
-    @if(this.races() && this.f1ApiService.f1Standings()?.DriverStandings){
+    @if(this.tableFor === 'results' || this.f1ApiService.f1Standings()?.DriverStandings){
         <!-- Common part for both 'results' and 'winners' -->
-    <div class="card" [class.table-container-blur]="this.f1ApiService.resultsAreLoading || this.f1ApiService.winnersAreLoading">
+    <div class="card" [class.table-container-blur]="this.tableFor === 'results' ? this.f1ApiService.resultsAreLoading : this.f1ApiService.winnersAreLoading">
       <p-table
         [paginator]="true"
         [rows]="(this.tableFor === 'results') ? 5 : 10"
         [showCurrentPageReport]="true"
-        [tableStyle]="{'min-width': '50rem'}"
+        [tableStyle]="{'min-width': '36rem'}"
         [value]="(this.tableFor === 'results') ? this.races()! : this.f1ApiService.f1Standings()?.DriverStandings!.slice(3, this.f1ApiService.f1Standings()?.DriverStandings!.length)"
         class="table-container">
 
@@ -44,13 +44,7 @@ import { Results } from '../../models/f1-race-results.model';
           </tr>
         </ng-template>
 
-        <!-- Paginator customization templates -->
-        <ng-template pTemplate="paginatorleft">
-          <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
-        </ng-template>
-        <ng-template pTemplate="paginatorright">
-          <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
-        </ng-template>
+        <ng-template pTemplate="emptymessage"><tr><td colspan="5">No results are available for this selection yet.</td></tr></ng-template>
       </p-table>
     </div>
     }

@@ -18,7 +18,7 @@ import { PanelModule } from 'primeng/panel';
   imports: [DropdownModule, FormsModule],
   template: `
   <p-dropdown [options]="this.f1ApiService.f1Rounds()?.MRData?.RaceTable?.Races"
-  [(ngModel)]="this.selectedRound" optionLabel="round" (onChange)="changeSeason($event)" [disabled]="this.f1ApiService.resultsAreLoading">
+  [(ngModel)]="this.selectedRound" optionLabel="round" ariaLabel="Select race round" (onChange)="changeSeason($event)" [disabled]="this.f1ApiService.resultsAreLoading">
     <ng-template pTemplate="selectedItem">
       <div class="flex align-items-center gap-2">
           <div>{{ this.f1ApiService.selectedRound() }}</div>
@@ -49,7 +49,7 @@ export class RoundSelectorComponent {
   template: `
   <!-- Panel component with a fixed header and content -->
   <p-panel [toggleable]="false">
-  
+
     <!-- Header template -->
     <ng-template pTemplate="header">
       <!-- Flex container for alignment -->
@@ -64,7 +64,7 @@ export class RoundSelectorComponent {
       <!-- Loop through races to display country flag for the selected round -->
       @for(race of this.f1ApiService.f1Rounds()?.MRData?.RaceTable?.Races; track $index){
         @if(race.round === this.f1ApiService.selectedRound()){
-          <img [src]="this.getImagePath(race.Circuit.Location.country)" alt="">          
+          <img [src]="this.getImagePath(race.Circuit.Location.country)" [alt]="race.Circuit.Location.country + ' flag'" width="48" height="32" (error)="$any($event.target).style.display='none'">
           <!-- <span class="font-bold">{{race.Circuit.Location.country}} Flag</span> -->
         }
       }
@@ -101,7 +101,7 @@ export class RoundSelectorComponent {
 
     @media (max-width: 850px) {
       .grand-prix-info {
-        font-size: 8px;
+        font-size: 10px;
         flex-direction: column;
         gap: 10px;
       }
@@ -139,6 +139,8 @@ export class RoundTemplateComponent {
         </div>
       </p-toolbar>
 
+      @if (this.f1ApiService.resultsError()) { <p class="notice" role="status">{{ this.f1ApiService.resultsError() }}</p> }
+      @if (this.f1ApiService.scheduleError()) { <p class="notice" role="status">{{ this.f1ApiService.scheduleError() }}</p> }
       <!-- Card section for the round template -->
       <div class="card" [class.table-container-blur]="this.f1ApiService.resultsAreLoading">
         <!-- Custom component for displaying and selecting a round -->

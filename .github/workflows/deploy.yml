@@ -30,6 +30,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install dependencies
         run: npm ci
+      - name: Refresh licensed external driver photos
+        run: npm run photos:prepare
       - name: Build production website
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}

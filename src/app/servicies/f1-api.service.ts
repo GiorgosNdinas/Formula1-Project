@@ -1,56 +1,50 @@
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Injectable, Injector, Signal, WritableSignal, computed, effect, signal } from '@angular/core';
+import { Injectable, effect, signal } from '@angular/core';
+import { catchError, finalize, of, timeout } from 'rxjs';
 import { F1Seasons } from '../models/f1-season.model';
-import { F1Rounds, Races } from '../models/f1-rounds.model';
-import { F1RaceResults, Results } from '../models/f1-race-results.model';
-import { DriverStandings, F1Standings, StandingsLists } from '../models/f1-standings.model';
+import { F1Rounds } from '../models/f1-rounds.model';
+import { F1RaceResults } from '../models/f1-race-results.model';
+import { F1Standings, StandingsLists } from '../models/f1-standings.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class F1ApiService {
-  // API base URL
-  private baseUrl = 'https://api.jolpi.ca/ergast/f1';
-  private currentYear: number = new Date().getFullYear();
-  
-
-  public selectedSeason = signal<string>(this.currentYear.toString());
-  public selectedRound = signal<string>('1');
-
-  // Flags for when data are loading
-  public winnersAreLoading: boolean = false;
-  public resultsAreLoading: boolean = false;
-
-  // A signal to get all f1 seasons
-  public f1Seasons: Signal<F1Seasons | undefined> = toSignal<F1Seasons>(this.http.get<F1Seasons>(`${this.baseUrl}/seasons.json?limit=200`));
-  // A signal to get the F1 rounds for a specific season
-  public f1Rounds = signal<F1Rounds | undefined>({});
-  // A signal to get the F1 race results for a specific season and round
-  public f1RaceResults = signal<F1RaceResults | undefined>({});
-  // A signal to get the F1 druvers standings for a specific season
-  public f1Standings = signal<StandingsLists | undefined>({});
-
-  constructor(private http: HttpClient) {
-    effect(() => {
-      this.winnersAreLoading = true;
-      this.resultsAreLoading = true;
-
-      this.http.get<F1Rounds>(`${this.baseUrl}/${this.selectedSeason()}.json`).subscribe(result => {
-        this.f1Rounds.set(result);
-        // Here we check if the selected round is out of the new round scope
-        if(result.MRData?.RaceTable.Races)
-          if(Number(this.selectedRound()) > result.MRData?.RaceTable.Races.length)
-            this.selectedRound.set('1');
-      });
-      this.http.get<F1RaceResults>(`${this.baseUrl}/${this.selectedSeason()}/${this.selectedRound()}/results.json`).subscribe(result => {
-        this.f1RaceResults.set(result);
-        this.resultsAreLoading = false
-      });
-      this.http.get<F1Standings>(`${this.baseUrl}/${this.selectedSeason()}/driverStandings.json`).subscribe(result => {
-        this.f1Standings.set(result.MRData?.StandingsTable.StandingsLists[0]);
-        this.winnersAreLoading = false;
-      });
-    }, { allowSignalWrites: true });
-  }
+ private readonly baseUrl = 'https://api.jolpi.ca/ergast/f1';
+ readonly selectedSeason = signal(String(new Date().getFullYear()));
+ readonly selectedRound = signal('1');
+ readonly resultsError = signal('');
+ readonly winnersError = signal('');
+ readonly scheduleError = signal('');
+ winnersAreLoading = false;
+ resultsAreLoading = false;
+ readonly f1Seasons = toSignal(this.http.get<F1Seasons>(`${this.baseUrl}/seasons.json?limit=200`).pipe(timeout(15000), catchError(() => of(undefined))));
+ readonly f1Rounds = signal<F1Rounds | undefined>(undefined);
+ readonly f1RaceResults = signal<F1RaceResults | undefined>(undefined);
+ readonly f1Standings = signal<StandingsLists | undefined>(undefined);
+ constructor(private http: HttpClient) {
+  effect(onCleanup => {
+   const season = this.selectedSeason();
+   this.winnersAreLoading = true;
+   this.winnersError.set(''); this.scheduleError.set('');
+   this.f1Standings.set(undefined); this.f1Rounds.set(undefined);
+   const schedule = this.http.get<F1Rounds>(`${this.baseUrl}/${season}.json`).pipe(timeout(15000)).subscribe({
+    next: result => { this.f1Rounds.set(result); const rounds = result.MRData?.RaceTable.Races ?? []; if (!rounds.some(r => r.round === this.selectedRound())) this.selectedRound.set(rounds[0]?.round ?? '1'); },
+    error: () => this.scheduleError.set('The race calendar could not be loaded. Try another season or reload the page.')
+   });
+   const standings = this.http.get<F1Standings>(`${this.baseUrl}/${season}/driverStandings.json`).pipe(timeout(15000), finalize(() => this.winnersAreLoading = false)).subscribe({
+    next: result => this.f1Standings.set(result.MRData?.StandingsTable.StandingsLists[0]),
+    error: () => this.winnersError.set('Driver standings could not be loaded. Try another season or reload the page.')
+   });
+   onCleanup(() => { schedule.unsubscribe(); standings.unsubscribe(); });
+  }, { allowSignalWrites: true });
+  effect(onCleanup => {
+   const season = this.selectedSeason(); const round = this.selectedRound();
+   this.resultsAreLoading = true; this.resultsError.set(''); this.f1RaceResults.set(undefined);
+   const results = this.http.get<F1RaceResults>(`${this.baseUrl}/${season}/${round}/results.json`).pipe(timeout(15000), finalize(() => this.resultsAreLoading = false)).subscribe({
+    next: result => this.f1RaceResults.set(result),
+    error: () => this.resultsError.set('Race results could not be loaded. Try another round or reload the page.')
+   });
+   onCleanup(() => results.unsubscribe());
+  }, { allowSignalWrites: true });
+ }
 }

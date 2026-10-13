@@ -1,46 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { MenuItem } from 'primeng/api';
-import { MenubarModule } from 'primeng/menubar';
-
-@Component({
-    selector: 'app-navbar',
-    standalone: true,
-    imports: [MenubarModule, RouterLink],
-    template: `
-        <p-menubar [model]="items" class="menubar-items">
-            <ng-template pTemplate="start">
-                <a [routerLink]="['/']">
-                <img src="assets/F1.png" height="40" class="mr-2" />
-                </a>
-            </ng-template>
-        </p-menubar>
-    `,
-    styleUrl: './navbar.component.scss'
-})
-export class NavbarComponent {
-    constructor() { }
-
-    items: MenuItem[] | undefined;
-
-    ngOnInit() {
-        this.items = [
-            {
-                label: 'Home',
-                routerLink: '/',
-                icon: 'pi pi-fw pi-file'
-            },
-            {
-                label: 'Results',
-                routerLink: 'results',
-                icon: 'pi pi-fw pi-pencil'
-            },
-            {
-                label: 'Winners',
-                routerLink: 'winners',
-                icon: 'pi pi-fw pi-user'
-            }
-        ];
-    }
-
-}
+import { RouterLink, RouterLinkActive } from '@angular/router';
+@Component({selector:'app-navbar',standalone:true,imports:[RouterLink,RouterLinkActive],template:`
+ <nav class="navigation" aria-label="Main navigation"><a routerLink="/" class="brand" aria-label="Formula 1 home" (click)="open=false"><img src="assets/F1.png" width="80" height="40" alt="Formula 1"></a><button class="menu-toggle" type="button" (click)="open=!open" [attr.aria-expanded]="open" aria-controls="main-links">{{open ? 'Close menu' : 'Menu'}} <span aria-hidden="true">☰</span></button><div id="main-links" class="links" [class.open]="open"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="open=false">Home</a><a routerLink="/results" routerLinkActive="active" (click)="open=false">Results</a><a routerLink="/winners" routerLinkActive="active" (click)="open=false">Winners</a></div></nav>`,styleUrl:'./navbar.component.scss'})
+export class NavbarComponent {open=false;}
