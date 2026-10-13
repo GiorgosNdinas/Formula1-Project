@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
 
 @Component({
     selector: 'app-navbar',
     standalone: true,
-    imports: [MenubarModule],
+    imports: [MenubarModule, RouterLink],
     template: `
         <p-menubar [model]="items" class="menubar-items">
             <ng-template pTemplate="start">
