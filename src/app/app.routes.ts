@@ -1,3 +1,6 @@
+/**
+ * Defines routes used by hash navigation on GitHub Pages.
+ */
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ResultsComponent } from './pages/results/results.component';

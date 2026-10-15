@@ -26,7 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-
 ## GitHub Pages and external driver photos
 
 The public site is deployed by `.github/workflows/deploy.yml` on pushes to `master` or `main`. In repository Settings → Pages, select GitHub Actions. Only GitHub's automatically supplied GITHUB_TOKEN is used. Hosting and standard Actions runners are free for this public repository.
@@ -38,3 +37,9 @@ Driver photographs are loaded directly from Wikimedia; image binaries are never 
 Metadata is refreshed after 30 days during deployment builds. Requests run sequentially, identify the project, and respect rate-limit backoff. Existing entries are retained on API failure. Missing/broken photos use initials rather than local driver images. Portraits are illustrative and may not be from the selected season. License terms on each source file still apply; the catalog is not a guarantee of all non-copyright rights. Existing local driver assets remain for reversible migration, but are no longer used by the podium.
 
 Mobile layouts include a collapsible navigation menu, stacked podium cards, wrapping season controls, and horizontally scrollable results tables. The homepage retains the video with a pause control and adds direct links to Results and Winners. Reduced-motion preferences hide the background video.
+
+### Photo discovery diagnostics
+
+Photo discovery tries up to eight non-deprecated Wikidata images, preferred first, followed by Wikipedia's free page image. Supported CC license deed/legalcode URL variants are normalized. If a cropped Commons file lacks the creator, the script follows an explicit `Extracted from` link and uses its creator only when the source license matches. Unverified attribution is never guessed.
+
+`src/app/data/driver-photo-report.json` records missing drivers, rejection reasons, retained cached entries and discovery errors. It is not imported into the website bundle. Unknown license families still use the initials fallback. The catalog and report are refreshed by `npm run photos:prepare` during GitHub Pages deployment. Run `node --test scripts/photo-utils.test.mjs` to check alternative selection and license URL validation.

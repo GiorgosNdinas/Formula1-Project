@@ -1,6 +1,7 @@
+/* Presentation rules for styles; preserve the responsive design. */
 /* You can add global styles to this file, and also import other style files */
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
+@import 'primeng/resources/themes/lara-light-blue/theme.css';
+@import 'primeng/resources/primeng.css';
 
 body {
   margin: 0;
@@ -29,18 +30,87 @@ body {
   background: #555;
 }
 
-* { box-sizing: border-box; }
-body { font-family: Arial, Helvetica, sans-serif; color: #151414; }
-button, input, select { font: inherit; }
-a:focus-visible, button:focus-visible { outline: 3px solid #ee0000; outline-offset: 4px; }
-.page-outlet { min-width: 0; }
-.p-toolbar { gap: 12px; flex-wrap: wrap; }
-.p-toolbar-group-end { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
-.p-toolbar h1 { font-size: clamp(1.5rem, 4vw, 2rem); }
-.p-toolbar h3 { font-size: 1rem; }
-.p-dropdown { min-height: 44px; }
-.p-datatable-wrapper { overflow-x: auto; max-width: 100%; }
-.p-paginator { gap: 4px; flex-wrap: wrap; }
-.notice { margin: 20px; padding: 16px; border: 1px solid #ddd; border-left: 4px solid #ee0000; border-radius: 6px; line-height: 1.6; }
-@media (max-width: 600px) { .p-toolbar { padding: 16px !important; } .p-toolbar h1 { margin: 0; } .p-toolbar-group-end { width: 100%; justify-content: space-between; } .p-toolbar h3 { margin: 0 !important; } .p-paginator-current { width: 100%; text-align: center; } }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #151414;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ee0000;
+  outline-offset: 4px;
+}
+.page-outlet {
+  min-width: 0;
+}
+.p-toolbar {
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.p-toolbar-group-end {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.p-toolbar h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+.p-toolbar h3 {
+  font-size: 1rem;
+}
+.p-dropdown {
+  min-height: 44px;
+}
+.p-datatable-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.p-paginator {
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.notice {
+  margin: 20px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-left: 4px solid #ee0000;
+  border-radius: 6px;
+  line-height: 1.6;
+}
+@media (max-width: 600px) {
+  .p-toolbar {
+    padding: 16px !important;
+  }
+  .p-toolbar h1 {
+    margin: 0;
+  }
+  .p-toolbar-group-end {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .p-toolbar h3 {
+    margin: 0 !important;
+  }
+  .p-paginator-current {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

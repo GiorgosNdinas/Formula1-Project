@@ -1,5 +1,66 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-@Component({selector:'app-navbar',standalone:true,imports:[RouterLink,RouterLinkActive],template:`
- <nav class="navigation" aria-label="Main navigation"><a routerLink="/" class="brand" aria-label="Formula 1 home" (click)="open=false"><img src="assets/F1.png" width="80" height="40" alt="Formula 1"></a><button class="menu-toggle" type="button" (click)="open=!open" [attr.aria-expanded]="open" aria-controls="main-links">{{open ? 'Close menu' : 'Menu'}} <span aria-hidden="true">☰</span></button><div id="main-links" class="links" [class.open]="open"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="open=false">Home</a><a routerLink="/results" routerLinkActive="active" (click)="open=false">Results</a><a routerLink="/winners" routerLinkActive="active" (click)="open=false">Winners</a></div></nav>`,styleUrl:'./navbar.component.scss'})
-export class NavbarComponent {open=false;}
+
+/**
+ * Provides navigation and a mobile menu that closes when a link is followed.
+ */
+@Component({
+  selector: 'app-navbar',
+  standalone: true,
+  imports: [RouterLink, RouterLinkActive],
+  template: `
+    <nav
+      class="navigation"
+      aria-label="Main navigation">
+      <a
+        routerLink="/"
+        class="brand"
+        aria-label="Formula 1 home"
+        (click)="open = false">
+        <img
+          src="assets/F1.png"
+          width="80"
+          height="40"
+          alt="Formula 1" />
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        (click)="open = !open"
+        [attr.aria-expanded]="open"
+        aria-controls="main-links">
+        {{ open ? 'Close menu' : 'Menu' }}
+        <span aria-hidden="true">☰</span>
+      </button>
+      <div
+        id="main-links"
+        class="links"
+        [class.open]="open">
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="open = false">
+          Home
+        </a>
+        <a
+          routerLink="/results"
+          routerLinkActive="active"
+          (click)="open = false">
+          Results
+        </a>
+        <a
+          routerLink="/winners"
+          routerLinkActive="active"
+          (click)="open = false">
+          Winners
+        </a>
+      </div>
+    </nav>
+  `,
+  styleUrl: './navbar.component.scss'
+})
+export class NavbarComponent {
+  // Controls whether the navigation links are expanded on small screens.
+  open = false;
+}

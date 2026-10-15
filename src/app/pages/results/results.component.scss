@@ -1,14 +1,16 @@
-:host::ng-deep{
+/* Presentation rules for results; preserve the responsive design. */
+:host::ng-deep {
   .p-toolbar {
     padding: 0 20px;
     border: none;
     border-radius: 0;
   }
   // Css  for the round-selector component
-  .p-panel-header{
+  .p-panel-header {
     padding-bottom: 5px;
   }
-  .p-panel-header, .p-panel-content {
+  .p-panel-header,
+  .p-panel-content {
     background: #151414;
     color: white;
     border-radius: 0;
@@ -19,7 +21,7 @@
     font-weight: 400;
   }
   // .p-element .p-inputwrapper .p-inputwrapper-filled span {
-  //   padding: 5px;      
+  //   padding: 5px;
   // }
 }
 
@@ -30,7 +32,7 @@
   transform: translate(-50%, -50%);
 }
 
-.table-container-blur{
+.table-container-blur {
   filter: blur(3px); /* Adjust the blur amount as needed */
   transition: filter 0.5s ease; /* Add a smooth transition effect */
 }

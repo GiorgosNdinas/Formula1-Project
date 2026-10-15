@@ -1,4 +1,3 @@
-
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Injectable, effect, signal } from '@angular/core';
@@ -31,7 +30,6 @@ import { F1Standings, StandingsLists } from '../models/f1-standings.model';
  */
 @Injectable({ providedIn: 'root' })
 export class F1ApiService {
-
   // Base URL for all Formula 1 API requests.
   private readonly baseUrl = 'https://api.jolpi.ca/ergast/f1';
 
@@ -82,9 +80,7 @@ export class F1ApiService {
    * signal that components can read reactively.
    */
   readonly f1Seasons = toSignal(
-    this.http.get<F1Seasons>(
-      `${this.baseUrl}/seasons.json?limit=200`
-    ).pipe(
+    this.http.get<F1Seasons>(`${this.baseUrl}/seasons.json?limit=200`).pipe(
       timeout(15000),
       catchError(() => of(undefined))
     )
@@ -98,14 +94,11 @@ export class F1ApiService {
    */
   readonly f1Rounds = signal<F1Rounds | undefined>(undefined);
 
-  readonly f1RaceResults =
-    signal<F1RaceResults | undefined>(undefined);
+  readonly f1RaceResults = signal<F1RaceResults | undefined>(undefined);
 
-  readonly f1Standings =
-    signal<StandingsLists | undefined>(undefined);
+  readonly f1Standings = signal<StandingsLists | undefined>(undefined);
 
   constructor(private http: HttpClient) {
-
     /**
      * EFFECT 1: Load season schedule and driver standings.
      *
@@ -118,109 +111,104 @@ export class F1ApiService {
      * 4. Fetch the driver's championship standings.
      * 5. Clean up previous HTTP subscriptions.
      */
-    effect(onCleanup => {
+    effect(
+      onCleanup => {
+        // Read the selected season.
+        // Angular tracks this signal as a dependency.
+        const season = this.selectedSeason();
 
-      // Read the selected season.
-      // Angular tracks this signal as a dependency.
-      const season = this.selectedSeason();
+        // Indicate that standings are being loaded.
+        this.winnersAreLoading = true;
 
-      // Indicate that standings are being loaded.
-      this.winnersAreLoading = true;
+        // Clear previous error messages.
+        this.winnersError.set('');
+        this.scheduleError.set('');
 
-      // Clear previous error messages.
-      this.winnersError.set('');
-      this.scheduleError.set('');
+        // Remove data from the previously selected season.
+        this.f1Standings.set(undefined);
+        this.f1Rounds.set(undefined);
 
-      // Remove data from the previously selected season.
-      this.f1Standings.set(undefined);
-      this.f1Rounds.set(undefined);
+        /**
+         * Fetch the race schedule for the selected season.
+         *
+         * Example endpoint:
+         * https://api.jolpi.ca/ergast/f1/2026.json
+         */
+        const schedule = this.http
+          .get<F1Rounds>(`${this.baseUrl}/${season}.json`)
+          .pipe(timeout(15000))
+          .subscribe({
+            next: result => {
+              // Store the returned race calendar.
+              this.f1Rounds.set(result);
 
-      /**
-       * Fetch the race schedule for the selected season.
-       *
-       * Example endpoint:
-       * https://api.jolpi.ca/ergast/f1/2026.json
-       */
-      const schedule = this.http.get<F1Rounds>(
-        `${this.baseUrl}/${season}.json`
-      ).pipe(
-        timeout(15000)
-      ).subscribe({
+              // Extract the list of races safely.
+              const rounds = result.MRData?.RaceTable.Races ?? [];
 
-        next: result => {
+              /**
+               * Check whether the currently selected round
+               * exists in the new season.
+               *
+               * If it does not exist, select the first
+               * available round or fall back to round 1.
+               */
+              if (!rounds.some(r => r.round === this.selectedRound())) {
+                this.selectedRound.set(rounds[0]?.round ?? '1');
+              }
+            },
 
-          // Store the returned race calendar.
-          this.f1Rounds.set(result);
+            // Display an error if the schedule request fails.
+            error: () =>
+              this.scheduleError.set(
+                'The race calendar could not be loaded. Try another season or reload the page.'
+              )
+          });
 
-          // Extract the list of races safely.
-          const rounds = result.MRData?.RaceTable.Races ?? [];
+        /**
+         * Fetch driver championship standings.
+         *
+         * Example endpoint:
+         * https://api.jolpi.ca/ergast/f1/2026/driverStandings.json
+         *
+         * finalize() resets the loading flag when the
+         * request completes, fails, or is unsubscribed.
+         */
+        const standings = this.http
+          .get<F1Standings>(`${this.baseUrl}/${season}/driverStandings.json`)
+          .pipe(
+            timeout(15000),
+            finalize(() => (this.winnersAreLoading = false))
+          )
+          .subscribe({
+            next: result => {
+              // Store the first standings list returned by the API.
+              this.f1Standings.set(
+                result.MRData?.StandingsTable.StandingsLists[0]
+              );
+            },
 
-          /**
-           * Check whether the currently selected round
-           * exists in the new season.
-           *
-           * If it does not exist, select the first
-           * available round or fall back to round 1.
-           */
-          if (!rounds.some(
-            r => r.round === this.selectedRound()
-          )) {
-            this.selectedRound.set(
-              rounds[0]?.round ?? '1'
-            );
-          }
-        },
+            // Display an error if standings cannot be retrieved.
+            error: () =>
+              this.winnersError.set(
+                'Driver standings could not be loaded. Try another season or reload the page.'
+              )
+          });
 
-        // Display an error if the schedule request fails.
-        error: () => this.scheduleError.set(
-          'The race calendar could not be loaded. Try another season or reload the page.'
-        )
-      });
-
-      /**
-       * Fetch driver championship standings.
-       *
-       * Example endpoint:
-       * https://api.jolpi.ca/ergast/f1/2026/driverStandings.json
-       *
-       * finalize() resets the loading flag when the
-       * request completes, fails, or is unsubscribed.
-       */
-      const standings = this.http.get<F1Standings>(
-        `${this.baseUrl}/${season}/driverStandings.json`
-      ).pipe(
-        timeout(15000),
-        finalize(() => this.winnersAreLoading = false)
-      ).subscribe({
-
-        next: result => {
-
-          // Store the first standings list returned by the API.
-          this.f1Standings.set(
-            result.MRData?.StandingsTable.StandingsLists[0]
-          );
-        },
-
-        // Display an error if standings cannot be retrieved.
-        error: () => this.winnersError.set(
-          'Driver standings could not be loaded. Try another season or reload the page.'
-        )
-      });
-
-      /**
-       * Cleanup:
-       *
-       * Unsubscribe from both requests when the selected
-       * season changes or the effect is destroyed.
-       *
-       * Prevents outdated requests from updating the UI.
-       */
-      onCleanup(() => {
-        schedule.unsubscribe();
-        standings.unsubscribe();
-      });
-
-    }, { allowSignalWrites: true });
+        /**
+         * Cleanup:
+         *
+         * Unsubscribe from both requests when the selected
+         * season changes or the effect is destroyed.
+         *
+         * Prevents outdated requests from updating the UI.
+         */
+        onCleanup(() => {
+          schedule.unsubscribe();
+          standings.unsubscribe();
+        });
+      },
+      { allowSignalWrites: true }
+    );
 
     /**
      * EFFECT 2: Load race results.
@@ -232,56 +220,57 @@ export class F1ApiService {
      * This ensures race results correspond to the
      * currently selected season and round.
      */
-    effect(onCleanup => {
+    effect(
+      onCleanup => {
+        // Read both signals to establish reactive dependencies.
+        const season = this.selectedSeason();
+        const round = this.selectedRound();
 
-      // Read both signals to establish reactive dependencies.
-      const season = this.selectedSeason();
-      const round = this.selectedRound();
+        // Mark race results as loading.
+        this.resultsAreLoading = true;
 
-      // Mark race results as loading.
-      this.resultsAreLoading = true;
+        // Clear the previous error message.
+        this.resultsError.set('');
 
-      // Clear the previous error message.
-      this.resultsError.set('');
+        // Remove results from the previously selected race.
+        this.f1RaceResults.set(undefined);
 
-      // Remove results from the previously selected race.
-      this.f1RaceResults.set(undefined);
+        /**
+         * Fetch race results for the selected round.
+         *
+         * Example endpoint:
+         * https://api.jolpi.ca/ergast/f1/2026/1/results.json
+         */
+        const results = this.http
+          .get<F1RaceResults>(`${this.baseUrl}/${season}/${round}/results.json`)
+          .pipe(
+            timeout(15000),
 
-      /**
-       * Fetch race results for the selected round.
-       *
-       * Example endpoint:
-       * https://api.jolpi.ca/ergast/f1/2026/1/results.json
-       */
-      const results = this.http.get<F1RaceResults>(
-        `${this.baseUrl}/${season}/${round}/results.json`
-      ).pipe(
-        timeout(15000),
+            // Reset loading when the request terminates.
+            finalize(() => (this.resultsAreLoading = false))
+          )
+          .subscribe({
+            next: result => {
+              // Store the complete race results response.
+              this.f1RaceResults.set(result);
+            },
 
-        // Reset loading when the request terminates.
-        finalize(() => this.resultsAreLoading = false)
-      ).subscribe({
+            // Display an error if race results cannot be loaded.
+            error: () =>
+              this.resultsError.set(
+                'Race results could not be loaded. Try another round or reload the page.'
+              )
+          });
 
-        next: result => {
-
-          // Store the complete race results response.
-          this.f1RaceResults.set(result);
-        },
-
-        // Display an error if race results cannot be loaded.
-        error: () => this.resultsError.set(
-          'Race results could not be loaded. Try another round or reload the page.'
-        )
-      });
-
-      /**
-       * Cleanup:
-       *
-       * Cancel the previous results request when the
-       * selected season or round changes.
-       */
-      onCleanup(() => results.unsubscribe());
-
-    }, { allowSignalWrites: true });
+        /**
+         * Cleanup:
+         *
+         * Cancel the previous results request when the
+         * selected season or round changes.
+         */
+        onCleanup(() => results.unsubscribe());
+      },
+      { allowSignalWrites: true }
+    );
   }
 }
