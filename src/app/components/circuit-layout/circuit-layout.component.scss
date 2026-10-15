@@ -1,26 +1,43 @@
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   min-width: 0;
+  width: 100%;
 }
 
 .circuit-layout {
   position: relative;
   display: grid;
+  // Defeat the image's intrinsic minimum size in the fixed-height drawing row.
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
   place-items: center;
   width: 100%;
+  max-width: 320px;
   height: 180px;
+  min-height: 0;
   margin: 0;
 }
 
 .track-outline {
+  display: block;
+  min-width: 0;
+  min-height: 0;
   width: 100%;
+  max-width: 100%;
   height: 100%;
+  max-height: 180px;
   object-fit: contain;
   // Preserve the original white variant's colors and transparency.
 }
 
 .circuit-credit {
-  margin: 8px 0 0;
+  // Credits stay in normal flow below the drawing, and grow the race section.
+  flex: 0 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 0 8px;
   color: #ddd;
   font-size: 0.75rem;
@@ -67,6 +84,9 @@
 
 @media (max-width: 600px) {
   .circuit-layout {
-    height: 190px;
+    height: 160px;
+  }
+  .track-outline {
+    max-height: 160px;
   }
 }

@@ -137,6 +137,11 @@ export class RoundSelectorComponent {
     }
     .race-layout {
       min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // Include both the drawing and its wrapping attribution in the grid row.
+      align-self: center;
     }
     @media (max-width: 900px) {
       .race-information {
