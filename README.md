@@ -46,29 +46,32 @@ Photo discovery tries up to eight non-deprecated Wikidata images, preferred firs
 
 ## Verified external circuit layouts
 
-The Results information band now places a reusable `CircuitLayoutComponent` between race details and location/date. On phones it stacks vertically. The SVG stays on Wikimedia, keeps its aspect ratio and transparency, and is displayed as a white silhouette. No circuit credits appear in the UI because only explicitly attribution-free artwork is admitted. Missing or failed images show the circuit name and a placeholder. No image HTML is injected.
+### Circuit layouts and attribution
 
-`npm run circuits:prepare` refreshes `src/app/data/circuit-layouts.json` and produces `circuit-layout-report.json`. Discovery reads Jolpica circuit identities and the reviewed source manifest `scripts/circuit-layout-sources.json`. It does not guess by filename or search on each page visit. Metadata is cached for 30 days. Unchanged cached files are not downloaded again; SVG bytes are inspected in memory only. Temporary network/API failures preserve matching verified cached entries. Explicit license/provenance/SVG failures exclude the affected entry. Both JSON files are written atomically before compilation.
+The catalog now uses **160 external SVG layouts for 78 circuits** from
+[Jules Roy's F1 Circuits SVG collection](https://github.com/f1db/f1-circuits-svg),
+pinned to commit `c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65` and licensed
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+This replaces the earlier attribution-free-only circuit policy with the owner's
+approval. Driver-photo licensing is unchanged.
 
-The initial eight Commons maps are AlexJ's original-work CC0 low-detail circuit diagrams. Reviewed season ranges:
+Every displayed circuit includes the author, license link and full credits link.
+The `/circuit-credits` hash route lists the copyright notice, original artwork,
+license evidence, modification statement and reviewed season ranges. Original
+white SVGs are displayed unchanged, scaled to fit; no SVG files are saved locally.
 
-| Circuit                 | Seasons                                         |
-| ----------------------- | ----------------------------------------------- |
-| Albert Park             | 1996–2019                                       |
-| Bahrain GP layout       | 2004–2009, 2012–2026; **2020 round 16 blocked** |
-| Catalunya               | 2007–2020                                       |
-| Hockenheim              | 2002–2019                                       |
-| Monaco                  | 2003–2014                                       |
-| Sepang                  | 1999–2015                                       |
-| Silverstone             | 2010 only                                       |
-| Valencia street circuit | 2008–2012                                       |
+`npm run circuits:prepare` checks the pinned copyright/license hash, validates SVG
+XML, and caches verified metadata for 30 days. Temporary upstream outages retain
+only matching reviewed metadata. Explicit validation failures stop deployment.
+Changing the upstream revision or approving another season requires a source
+manifest review; new seasons are never inferred automatically.
 
-Ranges are deliberately conservative. Gaps, later reconfigurations and unsupported circuits (including Lusail) show the placeholder. Bahrain 2010 and 2020 Sakhir must never show the standard GP image. Exact round overrides take priority; ambiguous matches fail closed. Stable circuit IDs handle naming changes without fuzzy matching. The catalog records the source page, license evidence, author, configuration evidence, verification time and content hash.
+All 24 races in the 2025 schedule and all 23 in the retrieved 2026 schedule are
+covered. Two upstream season gaps were reviewed explicitly against official F1
+sources: Shanghai's return in 2024�2025 and Sepang's return in 2026. Their evidence
+and the outline-only inference are recorded in the source manifest. No future
+season ranges are extrapolated.
 
-MasterPlay007's CC0 collection remains a pending source because individual provenance/historical configuration evidence is incomplete. CC BY/CC BY-SA circuit files are excluded. Do not broaden ranges or accept newly discovered artwork without checking its evidence. `sources` is an explicit approval manifest, not a license inferred from a filename.
-
-The only new library is the build/test-only `fast-xml-parser`, used to validate SVG XML safely. No backend, API key, runtime parsing library or paid service is needed. The existing Pages workflow now prepares circuits and runs `npm run circuits:test` before the production build; driver photo steps are preserved. No scheduled job is created.
-
-Tests exercise the actual matching function and Angular component signal state, Sakhir exceptions, year gaps, ambiguous mappings, URL and attribution checks, SVG safety, and stale image-load events. Run `npm run circuits:test` and `node --test scripts/photo-utils.test.mjs`.
-
-External hosting has no availability guarantee. Commons allows hotlinking, but files can change or disappear between checks. Runtime failures show a placeholder; no source is silently mirrored into Angular assets. To expand coverage, add an evidence-backed source/range to the manifest, regenerate metadata, inspect the result and test the new boundary years.
+Results and credits load lazily to keep the expanded metadata out of the initial
+homepage download. Mobile race details stack below 650px; credit text wraps and
+the credits page collapses to a single column on narrow screens.

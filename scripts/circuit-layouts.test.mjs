@@ -2,13 +2,14 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
+import { createHash } from 'node:crypto';
 import ts from 'typescript';
 import '@angular/compiler';
 import * as core from '@angular/core';
 import {
   inspectCircuitSvg,
   safeCircuitUrl,
-  verifyCircuitLicense
+  verifyCircuitRepositoryLicense
 } from './circuit-layout-utils.mjs';
 
 /** Execute the actual TypeScript matcher and component; no copied matching logic. */
@@ -104,26 +105,29 @@ test('circuit identity remains stable when the displayed name changes', () => {
   );
 });
 
-test('attribution requirements cannot be bypassed by a catalog flag alone', () => {
-  const metadata = {
-    Artist: { value: 'Creator' },
-    Credit: { value: 'Own work' },
-    AttributionRequired: { value: 'false' },
-    LicenseUrl: {
-      value: 'https://creativecommons.org/publicdomain/zero/1.0/deed.en'
-    }
+test('source licensing requires the exact reviewed notice and copyright', () => {
+  const text =
+    'Copyright Example Creator\nCreative Commons Attribution 4.0 International Public License';
+  const repository = {
+    license: 'CC-BY-4.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    copyright: 'Copyright Example Creator',
+    licenseSha256: createHash('sha256').update(text).digest('hex')
   };
-  assert.equal(verifyCircuitLicense(metadata), 'CC0-1.0');
+  assert.equal(verifyCircuitRepositoryLicense(text, repository), 'CC-BY-4.0');
   assert.throws(() =>
-    verifyCircuitLicense({
-      ...metadata,
-      LicenseUrl: { value: 'https://creativecommons.org/licenses/by/4.0/' }
+    verifyCircuitRepositoryLicense(text + ' altered', repository)
+  );
+  assert.throws(() =>
+    verifyCircuitRepositoryLicense(text, {
+      ...repository,
+      copyright: 'Unknown Creator'
     })
   );
   assert.throws(() =>
-    verifyCircuitLicense({
-      ...metadata,
-      Credit: { value: 'Unspecified source' }
+    verifyCircuitRepositoryLicense(text, {
+      ...repository,
+      license: 'Unspecified'
     })
   );
 });
@@ -178,6 +182,7 @@ test('component ignores stale load errors and updates signals when the race chan
     '../src/app/components/circuit-layout/circuit-layout.component.ts',
     {
       '@angular/core': core,
+      '@angular/router': { RouterLink: class {} },
       '../../servicies/circuit-layout.service': { CircuitLayoutService }
     }
   );
@@ -208,5 +213,166 @@ test('component ignores stale load errors and updates signals when the race chan
     assert.equal(component.image().length, 0);
   } finally {
     injector.destroy();
+  }
+});
+
+/** Guard the actual published catalog, including the latest complete season. */
+const published = JSON.parse(
+  readFileSync(
+    new URL('../src/app/data/circuit-layouts.json', import.meta.url),
+    'utf8'
+  )
+);
+
+test('all 24 races in the 2025 calendar resolve to credited SVGs', () => {
+  const circuits = [
+    'albert_park',
+    'shanghai',
+    'suzuka',
+    'bahrain',
+    'jeddah',
+    'miami',
+    'imola',
+    'monaco',
+    'catalunya',
+    'villeneuve',
+    'red_bull_ring',
+    'silverstone',
+    'spa',
+    'hungaroring',
+    'zandvoort',
+    'monza',
+    'baku',
+    'marina_bay',
+    'americas',
+    'rodriguez',
+    'interlagos',
+    'vegas',
+    'losail',
+    'yas_marina'
+  ];
+  for (const [index, id] of circuits.entries()) {
+    const entry = selectCircuitLayout(published, id, 2025, index + 1);
+    assert.ok(entry, `${id} has a reviewed 2025 layout`);
+    assert.equal(entry.author, 'ROY Jules');
+    assert.equal(entry.attributionRequired, true);
+    assert.equal(
+      entry.licenseUrl,
+      'https://creativecommons.org/licenses/by/4.0/'
+    );
+    assert.ok(safeCircuitUrl(entry.svgUrl));
+  }
+});
+
+test('real catalog changes historical outlines and resolves the Sakhir exception', () => {
+  assert.equal(
+    selectCircuitLayout(published, 'albert_park', 2019, 1)?.id,
+    'roy-melbourne-1'
+  );
+  assert.equal(
+    selectCircuitLayout(published, 'albert_park', 2025, 1)?.id,
+    'roy-melbourne-2'
+  );
+  assert.equal(
+    selectCircuitLayout(published, 'bahrain', 2010, 1)?.id,
+    'roy-bahrain-2'
+  );
+  assert.equal(
+    selectCircuitLayout(published, 'bahrain', 2020, 15)?.id,
+    'roy-bahrain-1'
+  );
+  assert.equal(
+    selectCircuitLayout(published, 'bahrain', 2020, 16)?.id,
+    'roy-bahrain-3'
+  );
+  assert.equal(
+    selectCircuitLayout(published, 'catalunya', 2022, 1)?.id,
+    'roy-catalunya-5'
+  );
+  assert.equal(
+    selectCircuitLayout(published, 'catalunya', 2025, 1)?.id,
+    'roy-catalunya-6'
+  );
+  assert.equal(
+    selectCircuitLayout(published, 'marina_bay', 2025, 1)?.id,
+    'roy-marina-bay-4'
+  );
+  assert.equal(
+    selectCircuitLayout(published, 'albert_park', 2027, 1),
+    undefined
+  );
+});
+
+test('attributed layouts cannot be selected without their source and license credits', () => {
+  const entry = published.entries[0];
+  for (const invalid of [
+    { ...entry, author: '' },
+    { ...entry, sourceUrl: '' },
+    { ...entry, licenseEvidenceUrl: '' },
+    { ...entry, licenseUrl: '' },
+    { ...entry, attributionRequired: false },
+    { ...entry, license: 'Unknown' }
+  ]) {
+    assert.equal(
+      selectCircuitLayout(
+        { entries: [invalid], exceptions: [] },
+        invalid.circuitId,
+        invalid.seasonRanges[0].from,
+        1
+      ),
+      undefined
+    );
+  }
+});
+
+test('GitHub SVG URLs require the reviewed repository, an immutable commit and minimal variant', () => {
+  assert.ok(safeCircuitUrl(published.entries[0].svgUrl));
+  for (const replacement of ['main', '../main', 'a'.repeat(39)]) {
+    assert.equal(
+      safeCircuitUrl(
+        published.entries[0].svgUrl.replace(/[a-f0-9]{40}/, replacement)
+      ),
+      false
+    );
+  }
+  assert.equal(
+    safeCircuitUrl(
+      published.entries[0].svgUrl.replace('f1db/', 'someone-else/')
+    ),
+    false
+  );
+});
+
+test('all 23 races in the retrieved 2026 calendar have credited layouts', () => {
+  const circuits = [
+    'albert_park',
+    'shanghai',
+    'suzuka',
+    'miami',
+    'villeneuve',
+    'monaco',
+    'catalunya',
+    'red_bull_ring',
+    'silverstone',
+    'spa',
+    'hungaroring',
+    'zandvoort',
+    'monza',
+    'madring',
+    'baku',
+    'sepang',
+    'marina_bay',
+    'americas',
+    'rodriguez',
+    'interlagos',
+    'vegas',
+    'losail',
+    'yas_marina'
+  ];
+  for (const [index, id] of circuits.entries()) {
+    assert.ok(
+      selectCircuitLayout(published, id, 2026, index + 1),
+      `${id} has a reviewed 2026 outline`
+    );
   }
 });

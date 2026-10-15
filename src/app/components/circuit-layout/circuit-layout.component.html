@@ -34,3 +34,20 @@
     </div>
   }
 </figure>
+@if (image().length) {
+  <p class="circuit-credit">
+    Circuit SVG by {{ image()[0].author }} ·
+    <a
+      [href]="image()[0].licenseUrl"
+      target="_blank"
+      rel="noopener noreferrer">
+      {{ image()[0].license }}
+    </a>
+    ·
+    <a
+      routerLink="/circuit-credits"
+      [fragment]="image()[0].id">
+      Full credits
+    </a>
+  </p>
+}

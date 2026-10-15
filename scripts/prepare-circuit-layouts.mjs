@@ -3,7 +3,7 @@ import { createHash } from 'node:crypto';
 import {
   inspectCircuitSvg,
   safeCircuitUrl,
-  verifyCircuitLicense
+  verifyCircuitRepositoryLicense
 } from './circuit-layout-utils.mjs';
 
 const sourcePath = new URL('./circuit-layout-sources.json', import.meta.url);
@@ -106,15 +106,39 @@ try {
   report.discoveryErrors.push(`Circuit identity lookup: ${error.message}`);
 }
 
+/**
+ * The reviewed repository revision is immutable. Verify its copyright/license
+ * notice before accepting attribution-required images; an outage can retain
+ * previously verified entries from exactly the same review manifest.
+ */
+const repository = sources.repository;
+const rawRoot = `https://raw.githubusercontent.com/${repository.name}/${repository.commit}/`;
+const sourceRoot = `https://github.com/${repository.name}/blob/${repository.commit}/`;
+let licenseVerified = false;
+try {
+  const licenseText = await (await request(rawRoot + 'LICENSE')).text();
+  verifyCircuitRepositoryLicense(licenseText, repository);
+  licenseVerified = true;
+} catch (error) {
+  if (!error.temporary && error.name !== 'AbortError') throw error;
+  report.discoveryErrors.push(`License verification: ${error.message}`);
+}
+
 const entries = [];
 for (const source of sources.sources) {
-  const reviewKey = digest(JSON.stringify(source));
+  const reviewKey = digest(JSON.stringify({ repository, source }));
   const cached = previous.entries.find(
     entry =>
       entry.id === source.id &&
       entry.reviewKey === reviewKey &&
       safeCircuitUrl(entry.svgUrl) &&
-      entry.attributionRequired === false
+      entry.svgUrl === rawRoot + source.svgPath &&
+      entry.license === 'CC-BY-4.0' &&
+      entry.attributionRequired === true &&
+      entry.author === repository.author &&
+      entry.sourceUrl === sourceRoot + source.svgPath &&
+      entry.licenseEvidenceUrl === sourceRoot + 'LICENSE' &&
+      entry.licenseUrl === repository.licenseUrl
   );
   if (cached && Date.now() - Date.parse(cached.verifiedAt) < 30 * 86400000) {
     entries.push(cached);
@@ -122,11 +146,12 @@ for (const source of sources.sources) {
     continue;
   }
   try {
-    if (!circuits.size)
+    if (!licenseVerified || !circuits.size) {
       throw Object.assign(
-        new Error('Circuit identities temporarily unavailable'),
+        new Error('Source verification temporarily unavailable'),
         { temporary: true }
       );
+    }
     if (!circuits.has(source.circuitId))
       throw new Error('Unknown Jolpica circuit ID');
     if (
@@ -138,48 +163,32 @@ for (const source of sources.sources) {
           Number.isInteger(range.to) &&
           range.from <= range.to
       )
-    )
+    ) {
       throw new Error('Missing provenance or bounded configuration evidence');
-    const params = new URLSearchParams({
-      action: 'query',
-      format: 'json',
-      prop: 'imageinfo',
-      titles: `File:${source.commonsFile}`,
-      iiprop: 'url|extmetadata',
-      iiextmetadatafilter:
-        'Artist|Credit|License|LicenseShortName|LicenseUrl|AttributionRequired|Copyrighted|Restrictions|Categories'
-    });
-    const info = await requestJson(
-      `https://commons.wikimedia.org/w/api.php?${params}`
-    );
-    const file = Object.values(info.query?.pages ?? {})[0]?.imageinfo?.[0];
-    const license = verifyCircuitLicense(file?.extmetadata);
-    if (!safeCircuitUrl(file?.url))
+    }
+    const svgUrl = rawRoot + source.svgPath;
+    if (!safeCircuitUrl(svgUrl))
       throw new Error('Unapproved external SVG origin');
-    const svgResponse = await request(file.url);
-    if (!svgResponse.headers.get('content-type')?.includes('image/svg+xml'))
-      throw new Error('Response is not SVG');
-    const xml = await svgResponse.text();
+    const response = await request(svgUrl);
+    const xml = await response.text();
+    // Inspect the actual XML rather than trusting the response MIME type.
     const dimensions = inspectCircuitSvg(xml);
     entries.push({
-      id: source.id,
-      circuitId: source.circuitId,
-      circuitName: source.circuitName,
-      seasonRanges: source.seasonRanges,
-      ...(source.rounds ? { rounds: source.rounds } : {}),
-      svgUrl: file.url,
-      sourceUrl: file.descriptionurl,
-      license,
-      licenseEvidenceUrl: file.descriptionurl,
-      attributionRequired: false,
-      author: file.extmetadata.Artist.value.replace(/<[^>]*>/g, '').trim(),
-      provenance: source.provenance,
-      configurationEvidenceUrls: source.configurationEvidenceUrls,
+      ...source,
+      svgUrl,
+      sourceUrl: sourceRoot + source.svgPath,
+      license: repository.license,
+      licenseUrl: repository.licenseUrl,
+      licenseEvidenceUrl: sourceRoot + 'LICENSE',
+      attributionRequired: true,
+      author: repository.author,
+      copyright: repository.copyright,
+      modifications:
+        'Original minimal white SVG displayed unchanged; scaled to fit.',
       verifiedAt: new Date().toISOString(),
       sha256: digest(xml),
       reviewKey,
-      ...dimensions,
-      presentation: source.presentation
+      ...dimensions
     });
     report.verified.push(source.id);
   } catch (error) {
@@ -195,13 +204,15 @@ report.missingCircuitIds = [...circuits.keys()].filter(
   id => !entries.some(entry => entry.circuitId === id)
 );
 await save(catalogPath, {
-  schemaVersion: 1,
+  schemaVersion: 2,
   entries,
   exceptions: sources.exceptions
 });
 await save(reportPath, report);
 console.log(
-  `Circuit layouts: ${entries.length} verified/cached, ${report.rejected.length} rejected, ${report.pending.length} source collections pending review.`
+  `Circuit layouts: ${entries.length} verified/cached, ${report.rejected.length} rejected.`
 );
 for (const issue of report.rejected)
   console.warn(`${issue.id}: ${issue.reason}`);
+// An incomplete refresh must not silently publish a mostly empty catalog.
+if (report.rejected.length) process.exitCode = 1;

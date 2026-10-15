@@ -1,146 +1,3149 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "repository": {
+    "name": "f1db/f1-circuits-svg",
+    "commit": "c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65",
+    "author": "ROY Jules",
+    "copyright": "Copyright \u00a9 2024-2026 ROY Jules",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "licenseSha256": "9b642f01c2a79c6cf60fb91500b82e286977a9192cb6180736064d32b11e44dd"
+  },
   "sources": [
     {
-      "id": "albert_park-commons-infobox",
-      "circuitId": "albert_park",
-      "circuitName": "Albert Park Grand Prix Circuit",
-      "commonsFile": "Circuit Albert Park 1996 infobox.svg",
+      "id": "roy-adelaide-1",
+      "circuitId": "adelaide",
+      "circuitName": "Adelaide Street Circuit",
       "seasonRanges": [
         {
-          "from": 1996,
-          "to": 2019
+          "from": 1985,
+          "to": 1995
         }
       ],
-      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "svgPath": "circuits/minimal/white/adelaide-1.svg",
       "configurationEvidenceUrls": [
-        "https://commons.wikimedia.org/wiki/File:Circuit_Albert_Park_1996_infobox.svg",
-        "https://www.formula1.com/en/latest/article/must-see-ride-onboard-with-the-safety-car-to-check-out-the-albert-park-track.7qtSFARvV2ZMOwTFqT05gj"
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
       ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
       "presentation": "white-silhouette"
     },
     {
-      "id": "bahrain-commons-infobox",
+      "id": "roy-aida-1",
+      "circuitId": "okayama",
+      "circuitName": "Okayama International Circuit",
+      "seasonRanges": [
+        {
+          "from": 1994,
+          "to": 1995
+        }
+      ],
+      "svgPath": "circuits/minimal/white/aida-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-ain-diab-1",
+      "circuitId": "ain-diab",
+      "circuitName": "Ain-Diab Circuit",
+      "seasonRanges": [
+        {
+          "from": 1958,
+          "to": 1958
+        }
+      ],
+      "svgPath": "circuits/minimal/white/ain-diab-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-aintree-1",
+      "circuitId": "aintree",
+      "circuitName": "Aintree Motor Racing Circuit",
+      "seasonRanges": [
+        {
+          "from": 1955,
+          "to": 1955
+        },
+        {
+          "from": 1957,
+          "to": 1957
+        },
+        {
+          "from": 1959,
+          "to": 1959
+        },
+        {
+          "from": 1961,
+          "to": 1962
+        }
+      ],
+      "svgPath": "circuits/minimal/white/aintree-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-anderstorp-1",
+      "circuitId": "anderstorp",
+      "circuitName": "Anderstorp Raceway",
+      "seasonRanges": [
+        {
+          "from": 1973,
+          "to": 1978
+        }
+      ],
+      "svgPath": "circuits/minimal/white/anderstorp-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-austin-1",
+      "circuitId": "americas",
+      "circuitName": "Circuit of the Americas",
+      "seasonRanges": [
+        {
+          "from": 2012,
+          "to": 2019
+        },
+        {
+          "from": 2021,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/austin-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-avus-1",
+      "circuitId": "avus",
+      "circuitName": "AVUS",
+      "seasonRanges": [
+        {
+          "from": 1959,
+          "to": 1959
+        }
+      ],
+      "svgPath": "circuits/minimal/white/avus-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-bahrain-1",
       "circuitId": "bahrain",
       "circuitName": "Bahrain International Circuit",
-      "commonsFile": "Circuit Bahrain 2004 Infobox.svg",
       "seasonRanges": [
         {
           "from": 2004,
           "to": 2009
         },
         {
-          "from": 2012,
+          "from": 2011,
           "to": 2026
         }
       ],
-      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "svgPath": "circuits/minimal/white/bahrain-1.svg",
       "configurationEvidenceUrls": [
-        "https://commons.wikimedia.org/wiki/File:Circuit_Bahrain_2004_Infobox.svg"
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
       ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
       "presentation": "white-silhouette"
     },
     {
-      "id": "catalunya-commons-infobox",
-      "circuitId": "catalunya",
-      "circuitName": "Circuit de Barcelona-Catalunya",
-      "commonsFile": "Circuit Catalunya 2007 Infobox.svg",
-      "seasonRanges": [
-        {
-          "from": 2007,
-          "to": 2020
-        }
-      ],
-      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
-      "configurationEvidenceUrls": [
-        "https://commons.wikimedia.org/wiki/File:Circuit_Catalunya_2007_Infobox.svg",
-        "https://www.formula1.com/en/latest/article/circuit-de-barcelona-catalunya-complete-remodelling-of-turn-10.giY8HxbKVmtub2ZjyvI1B"
-      ],
-      "presentation": "white-silhouette"
-    },
-    {
-      "id": "hockenheimring-commons-infobox",
-      "circuitId": "hockenheimring",
-      "circuitName": "Hockenheimring",
-      "commonsFile": "Circuit Hockenheim 2002 infobox.svg",
-      "seasonRanges": [
-        {
-          "from": 2002,
-          "to": 2019
-        }
-      ],
-      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
-      "configurationEvidenceUrls": [
-        "https://commons.wikimedia.org/wiki/File:Circuit_Hockenheim_2002_infobox.svg"
-      ],
-      "presentation": "white-silhouette"
-    },
-    {
-      "id": "monaco-commons-infobox",
-      "circuitId": "monaco",
-      "circuitName": "Circuit de Monaco",
-      "commonsFile": "Circuit Monaco 2003 infobox.svg",
-      "seasonRanges": [
-        {
-          "from": 2003,
-          "to": 2014
-        }
-      ],
-      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
-      "configurationEvidenceUrls": [
-        "https://commons.wikimedia.org/wiki/File:Circuit_Monaco_2003_infobox.svg"
-      ],
-      "presentation": "white-silhouette"
-    },
-    {
-      "id": "sepang-commons-infobox",
-      "circuitId": "sepang",
-      "circuitName": "Sepang International Circuit",
-      "commonsFile": "Circuit Sepang 1999 Infobox.svg",
-      "seasonRanges": [
-        {
-          "from": 1999,
-          "to": 2015
-        }
-      ],
-      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
-      "configurationEvidenceUrls": [
-        "https://commons.wikimedia.org/wiki/File:Circuit_Sepang_1999_Infobox.svg"
-      ],
-      "presentation": "white-silhouette"
-    },
-    {
-      "id": "silverstone-commons-infobox",
-      "circuitId": "silverstone",
-      "circuitName": "Silverstone Circuit",
-      "commonsFile": "Circuit Silverstone 2010 infobox.svg",
+      "id": "roy-bahrain-2",
+      "circuitId": "bahrain",
+      "circuitName": "Bahrain International Circuit",
       "seasonRanges": [
         {
           "from": 2010,
           "to": 2010
         }
       ],
-      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "svgPath": "circuits/minimal/white/bahrain-2.svg",
       "configurationEvidenceUrls": [
-        "https://commons.wikimedia.org/wiki/File:Circuit_Silverstone_2010_infobox.svg"
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
       ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
       "presentation": "white-silhouette"
     },
     {
-      "id": "valencia-commons-infobox",
-      "circuitId": "valencia",
-      "circuitName": "Valencia Street Circuit",
-      "commonsFile": "Circuit Valencia 2008 Infobox.svg",
+      "id": "roy-bahrain-3",
+      "circuitId": "bahrain",
+      "circuitName": "Bahrain International Circuit",
+      "seasonRanges": [
+        {
+          "from": 2020,
+          "to": 2020
+        }
+      ],
+      "svgPath": "circuits/minimal/white/bahrain-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette",
+      "rounds": [
+        16
+      ]
+    },
+    {
+      "id": "roy-baku-1",
+      "circuitId": "baku",
+      "circuitName": "Baku City Circuit",
+      "seasonRanges": [
+        {
+          "from": 2016,
+          "to": 2019
+        },
+        {
+          "from": 2021,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/baku-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-brands-hatch-1",
+      "circuitId": "brands_hatch",
+      "circuitName": "Brands Hatch",
+      "seasonRanges": [
+        {
+          "from": 1964,
+          "to": 1964
+        },
+        {
+          "from": 1966,
+          "to": 1966
+        },
+        {
+          "from": 1968,
+          "to": 1968
+        },
+        {
+          "from": 1970,
+          "to": 1970
+        },
+        {
+          "from": 1972,
+          "to": 1972
+        },
+        {
+          "from": 1974,
+          "to": 1974
+        }
+      ],
+      "svgPath": "circuits/minimal/white/brands-hatch-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-brands-hatch-2",
+      "circuitId": "brands_hatch",
+      "circuitName": "Brands Hatch",
+      "seasonRanges": [
+        {
+          "from": 1976,
+          "to": 1976
+        },
+        {
+          "from": 1978,
+          "to": 1978
+        },
+        {
+          "from": 1980,
+          "to": 1980
+        },
+        {
+          "from": 1982,
+          "to": 1986
+        }
+      ],
+      "svgPath": "circuits/minimal/white/brands-hatch-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-bremgarten-1",
+      "circuitId": "bremgarten",
+      "circuitName": "Circuit Bremgarten",
+      "seasonRanges": [
+        {
+          "from": 1950,
+          "to": 1954
+        }
+      ],
+      "svgPath": "circuits/minimal/white/bremgarten-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-buddh-1",
+      "circuitId": "buddh",
+      "circuitName": "Buddh International Circuit",
+      "seasonRanges": [
+        {
+          "from": 2011,
+          "to": 2013
+        }
+      ],
+      "svgPath": "circuits/minimal/white/buddh-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-buenos-aires-1",
+      "circuitId": "galvez",
+      "circuitName": "Aut\u00f3dromo Juan y Oscar G\u00e1lvez",
+      "seasonRanges": [
+        {
+          "from": 1953,
+          "to": 1958
+        },
+        {
+          "from": 1960,
+          "to": 1960
+        }
+      ],
+      "svgPath": "circuits/minimal/white/buenos-aires-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-buenos-aires-2",
+      "circuitId": "galvez",
+      "circuitName": "Aut\u00f3dromo Juan y Oscar G\u00e1lvez",
+      "seasonRanges": [
+        {
+          "from": 1972,
+          "to": 1973
+        }
+      ],
+      "svgPath": "circuits/minimal/white/buenos-aires-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-buenos-aires-3",
+      "circuitId": "galvez",
+      "circuitName": "Aut\u00f3dromo Juan y Oscar G\u00e1lvez",
+      "seasonRanges": [
+        {
+          "from": 1974,
+          "to": 1975
+        },
+        {
+          "from": 1977,
+          "to": 1981
+        }
+      ],
+      "svgPath": "circuits/minimal/white/buenos-aires-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-buenos-aires-4",
+      "circuitId": "galvez",
+      "circuitName": "Aut\u00f3dromo Juan y Oscar G\u00e1lvez",
+      "seasonRanges": [
+        {
+          "from": 1995,
+          "to": 1998
+        }
+      ],
+      "svgPath": "circuits/minimal/white/buenos-aires-4.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-bugatti-1",
+      "circuitId": "lemans",
+      "circuitName": "Bugatti Circuit",
+      "seasonRanges": [
+        {
+          "from": 1967,
+          "to": 1967
+        }
+      ],
+      "svgPath": "circuits/minimal/white/bugatti-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-caesars-palace-1",
+      "circuitId": "las_vegas",
+      "circuitName": "Caesars Palace",
+      "seasonRanges": [
+        {
+          "from": 1981,
+          "to": 1982
+        }
+      ],
+      "svgPath": "circuits/minimal/white/caesars-palace-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-catalunya-1",
+      "circuitId": "catalunya",
+      "circuitName": "Circuit de Barcelona-Catalunya",
+      "seasonRanges": [
+        {
+          "from": 1991,
+          "to": 1994
+        }
+      ],
+      "svgPath": "circuits/minimal/white/catalunya-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-catalunya-2",
+      "circuitId": "catalunya",
+      "circuitName": "Circuit de Barcelona-Catalunya",
+      "seasonRanges": [
+        {
+          "from": 1995,
+          "to": 2003
+        }
+      ],
+      "svgPath": "circuits/minimal/white/catalunya-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-catalunya-3",
+      "circuitId": "catalunya",
+      "circuitName": "Circuit de Barcelona-Catalunya",
+      "seasonRanges": [
+        {
+          "from": 2004,
+          "to": 2006
+        }
+      ],
+      "svgPath": "circuits/minimal/white/catalunya-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-catalunya-4",
+      "circuitId": "catalunya",
+      "circuitName": "Circuit de Barcelona-Catalunya",
+      "seasonRanges": [
+        {
+          "from": 2007,
+          "to": 2020
+        }
+      ],
+      "svgPath": "circuits/minimal/white/catalunya-4.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-catalunya-5",
+      "circuitId": "catalunya",
+      "circuitName": "Circuit de Barcelona-Catalunya",
+      "seasonRanges": [
+        {
+          "from": 2021,
+          "to": 2022
+        }
+      ],
+      "svgPath": "circuits/minimal/white/catalunya-5.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-catalunya-6",
+      "circuitId": "catalunya",
+      "circuitName": "Circuit de Barcelona-Catalunya",
+      "seasonRanges": [
+        {
+          "from": 2023,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/catalunya-6.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-clermont-ferrand-1",
+      "circuitId": "charade",
+      "circuitName": "Charade Circuit",
+      "seasonRanges": [
+        {
+          "from": 1965,
+          "to": 1965
+        },
+        {
+          "from": 1969,
+          "to": 1970
+        },
+        {
+          "from": 1972,
+          "to": 1972
+        }
+      ],
+      "svgPath": "circuits/minimal/white/clermont-ferrand-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-dallas-1",
+      "circuitId": "dallas",
+      "circuitName": "Fair Park",
+      "seasonRanges": [
+        {
+          "from": 1984,
+          "to": 1984
+        }
+      ],
+      "svgPath": "circuits/minimal/white/dallas-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-detroit-1",
+      "circuitId": "detroit",
+      "circuitName": "Detroit Street Circuit",
+      "seasonRanges": [
+        {
+          "from": 1982,
+          "to": 1982
+        }
+      ],
+      "svgPath": "circuits/minimal/white/detroit-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-detroit-2",
+      "circuitId": "detroit",
+      "circuitName": "Detroit Street Circuit",
+      "seasonRanges": [
+        {
+          "from": 1983,
+          "to": 1988
+        }
+      ],
+      "svgPath": "circuits/minimal/white/detroit-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-dijon-1",
+      "circuitId": "dijon",
+      "circuitName": "Dijon-Prenois",
+      "seasonRanges": [
+        {
+          "from": 1974,
+          "to": 1974
+        }
+      ],
+      "svgPath": "circuits/minimal/white/dijon-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-dijon-2",
+      "circuitId": "dijon",
+      "circuitName": "Dijon-Prenois",
+      "seasonRanges": [
+        {
+          "from": 1977,
+          "to": 1977
+        },
+        {
+          "from": 1979,
+          "to": 1979
+        },
+        {
+          "from": 1981,
+          "to": 1982
+        },
+        {
+          "from": 1984,
+          "to": 1984
+        }
+      ],
+      "svgPath": "circuits/minimal/white/dijon-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-donington-1",
+      "circuitId": "donington",
+      "circuitName": "Donington Park",
+      "seasonRanges": [
+        {
+          "from": 1993,
+          "to": 1993
+        }
+      ],
+      "svgPath": "circuits/minimal/white/donington-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-east-london-1",
+      "circuitId": "george",
+      "circuitName": "Prince George Circuit",
+      "seasonRanges": [
+        {
+          "from": 1962,
+          "to": 1963
+        },
+        {
+          "from": 1965,
+          "to": 1965
+        }
+      ],
+      "svgPath": "circuits/minimal/white/east-london-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-estoril-1",
+      "circuitId": "estoril",
+      "circuitName": "Aut\u00f3dromo do Estoril",
+      "seasonRanges": [
+        {
+          "from": 1984,
+          "to": 1993
+        }
+      ],
+      "svgPath": "circuits/minimal/white/estoril-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-estoril-2",
+      "circuitId": "estoril",
+      "circuitName": "Aut\u00f3dromo do Estoril",
+      "seasonRanges": [
+        {
+          "from": 1994,
+          "to": 1996
+        }
+      ],
+      "svgPath": "circuits/minimal/white/estoril-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-fuji-1",
+      "circuitId": "fuji",
+      "circuitName": "Fuji Speedway",
+      "seasonRanges": [
+        {
+          "from": 1976,
+          "to": 1977
+        }
+      ],
+      "svgPath": "circuits/minimal/white/fuji-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-fuji-2",
+      "circuitId": "fuji",
+      "circuitName": "Fuji Speedway",
+      "seasonRanges": [
+        {
+          "from": 2007,
+          "to": 2008
+        }
+      ],
+      "svgPath": "circuits/minimal/white/fuji-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-hockenheimring-1",
+      "circuitId": "hockenheimring",
+      "circuitName": "Hockenheimring",
+      "seasonRanges": [
+        {
+          "from": 1970,
+          "to": 1970
+        },
+        {
+          "from": 1977,
+          "to": 1981
+        }
+      ],
+      "svgPath": "circuits/minimal/white/hockenheimring-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-hockenheimring-2",
+      "circuitId": "hockenheimring",
+      "circuitName": "Hockenheimring",
+      "seasonRanges": [
+        {
+          "from": 1982,
+          "to": 1984
+        },
+        {
+          "from": 1986,
+          "to": 1991
+        }
+      ],
+      "svgPath": "circuits/minimal/white/hockenheimring-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-hockenheimring-3",
+      "circuitId": "hockenheimring",
+      "circuitName": "Hockenheimring",
+      "seasonRanges": [
+        {
+          "from": 1992,
+          "to": 2001
+        }
+      ],
+      "svgPath": "circuits/minimal/white/hockenheimring-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-hockenheimring-4",
+      "circuitId": "hockenheimring",
+      "circuitName": "Hockenheimring",
+      "seasonRanges": [
+        {
+          "from": 2002,
+          "to": 2006
+        },
+        {
+          "from": 2008,
+          "to": 2008
+        },
+        {
+          "from": 2010,
+          "to": 2010
+        },
+        {
+          "from": 2012,
+          "to": 2012
+        },
+        {
+          "from": 2014,
+          "to": 2014
+        },
+        {
+          "from": 2016,
+          "to": 2016
+        },
+        {
+          "from": 2018,
+          "to": 2019
+        }
+      ],
+      "svgPath": "circuits/minimal/white/hockenheimring-4.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-hungaroring-1",
+      "circuitId": "hungaroring",
+      "circuitName": "Hungaroring",
+      "seasonRanges": [
+        {
+          "from": 1986,
+          "to": 1988
+        }
+      ],
+      "svgPath": "circuits/minimal/white/hungaroring-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-hungaroring-2",
+      "circuitId": "hungaroring",
+      "circuitName": "Hungaroring",
+      "seasonRanges": [
+        {
+          "from": 1989,
+          "to": 2002
+        }
+      ],
+      "svgPath": "circuits/minimal/white/hungaroring-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-hungaroring-3",
+      "circuitId": "hungaroring",
+      "circuitName": "Hungaroring",
+      "seasonRanges": [
+        {
+          "from": 2003,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/hungaroring-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-imola-1",
+      "circuitId": "imola",
+      "circuitName": "Autodromo Internazionale Enzo e Dino Ferrari",
+      "seasonRanges": [
+        {
+          "from": 1980,
+          "to": 1994
+        }
+      ],
+      "svgPath": "circuits/minimal/white/imola-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-imola-2",
+      "circuitId": "imola",
+      "circuitName": "Autodromo Internazionale Enzo e Dino Ferrari",
+      "seasonRanges": [
+        {
+          "from": 1995,
+          "to": 2006
+        }
+      ],
+      "svgPath": "circuits/minimal/white/imola-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-imola-3",
+      "circuitId": "imola",
+      "circuitName": "Autodromo Internazionale Enzo e Dino Ferrari",
+      "seasonRanges": [
+        {
+          "from": 2020,
+          "to": 2025
+        }
+      ],
+      "svgPath": "circuits/minimal/white/imola-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-indianapolis-1",
+      "circuitId": "indianapolis",
+      "circuitName": "Indianapolis Motor Speedway",
+      "seasonRanges": [
+        {
+          "from": 1950,
+          "to": 1960
+        }
+      ],
+      "svgPath": "circuits/minimal/white/indianapolis-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-indianapolis-2",
+      "circuitId": "indianapolis",
+      "circuitName": "Indianapolis Motor Speedway",
+      "seasonRanges": [
+        {
+          "from": 2000,
+          "to": 2007
+        }
+      ],
+      "svgPath": "circuits/minimal/white/indianapolis-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-interlagos-1",
+      "circuitId": "interlagos",
+      "circuitName": "Aut\u00f3dromo Jos\u00e9 Carlos Pace",
+      "seasonRanges": [
+        {
+          "from": 1973,
+          "to": 1977
+        },
+        {
+          "from": 1979,
+          "to": 1980
+        }
+      ],
+      "svgPath": "circuits/minimal/white/interlagos-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-interlagos-2",
+      "circuitId": "interlagos",
+      "circuitName": "Aut\u00f3dromo Jos\u00e9 Carlos Pace",
+      "seasonRanges": [
+        {
+          "from": 1990,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/interlagos-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-istanbul-1",
+      "circuitId": "istanbul",
+      "circuitName": "Istanbul Park",
+      "seasonRanges": [
+        {
+          "from": 2005,
+          "to": 2011
+        },
+        {
+          "from": 2020,
+          "to": 2021
+        }
+      ],
+      "svgPath": "circuits/minimal/white/istanbul-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-jacarepagua-1",
+      "circuitId": "jacarepagua",
+      "circuitName": "Aut\u00f3dromo Internacional Nelson Piquet",
+      "seasonRanges": [
+        {
+          "from": 1978,
+          "to": 1978
+        },
+        {
+          "from": 1981,
+          "to": 1989
+        }
+      ],
+      "svgPath": "circuits/minimal/white/jacarepagua-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-jarama-1",
+      "circuitId": "jarama",
+      "circuitName": "Circuito del Jarama",
+      "seasonRanges": [
+        {
+          "from": 1968,
+          "to": 1968
+        },
+        {
+          "from": 1970,
+          "to": 1970
+        },
+        {
+          "from": 1972,
+          "to": 1972
+        },
+        {
+          "from": 1974,
+          "to": 1974
+        },
+        {
+          "from": 1976,
+          "to": 1979
+        }
+      ],
+      "svgPath": "circuits/minimal/white/jarama-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-jarama-2",
+      "circuitId": "jarama",
+      "circuitName": "Circuito del Jarama",
+      "seasonRanges": [
+        {
+          "from": 1981,
+          "to": 1981
+        }
+      ],
+      "svgPath": "circuits/minimal/white/jarama-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-jeddah-1",
+      "circuitId": "jeddah",
+      "circuitName": "Jeddah Corniche Circuit",
+      "seasonRanges": [
+        {
+          "from": 2021,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/jeddah-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-jerez-1",
+      "circuitId": "jerez",
+      "circuitName": "Circuito de Jerez",
+      "seasonRanges": [
+        {
+          "from": 1986,
+          "to": 1990
+        }
+      ],
+      "svgPath": "circuits/minimal/white/jerez-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-jerez-2",
+      "circuitId": "jerez",
+      "circuitName": "Circuito de Jerez",
+      "seasonRanges": [
+        {
+          "from": 1994,
+          "to": 1994
+        },
+        {
+          "from": 1997,
+          "to": 1997
+        }
+      ],
+      "svgPath": "circuits/minimal/white/jerez-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-kyalami-1",
+      "circuitId": "kyalami",
+      "circuitName": "Kyalami Racing Circuit",
+      "seasonRanges": [
+        {
+          "from": 1967,
+          "to": 1980
+        },
+        {
+          "from": 1982,
+          "to": 1985
+        }
+      ],
+      "svgPath": "circuits/minimal/white/kyalami-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-kyalami-2",
+      "circuitId": "kyalami",
+      "circuitName": "Kyalami Racing Circuit",
+      "seasonRanges": [
+        {
+          "from": 1992,
+          "to": 1993
+        }
+      ],
+      "svgPath": "circuits/minimal/white/kyalami-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-las-vegas-1",
+      "circuitId": "vegas",
+      "circuitName": "Las Vegas Street Circuit",
+      "seasonRanges": [
+        {
+          "from": 2023,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/las-vegas-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-long-beach-1",
+      "circuitId": "long_beach",
+      "circuitName": "Long Beach",
+      "seasonRanges": [
+        {
+          "from": 1976,
+          "to": 1981
+        }
+      ],
+      "svgPath": "circuits/minimal/white/long-beach-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-long-beach-2",
+      "circuitId": "long_beach",
+      "circuitName": "Long Beach",
+      "seasonRanges": [
+        {
+          "from": 1982,
+          "to": 1982
+        }
+      ],
+      "svgPath": "circuits/minimal/white/long-beach-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-long-beach-3",
+      "circuitId": "long_beach",
+      "circuitName": "Long Beach",
+      "seasonRanges": [
+        {
+          "from": 1983,
+          "to": 1983
+        }
+      ],
+      "svgPath": "circuits/minimal/white/long-beach-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-lusail-1",
+      "circuitId": "losail",
+      "circuitName": "Lusail International Circuit",
+      "seasonRanges": [
+        {
+          "from": 2021,
+          "to": 2021
+        },
+        {
+          "from": 2023,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/lusail-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-madring-1",
+      "circuitId": "madring",
+      "circuitName": "Circuito de Madring",
+      "seasonRanges": [
+        {
+          "from": 2026,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/madring-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-magny-cours-1",
+      "circuitId": "magny_cours",
+      "circuitName": "Circuit de Nevers Magny-Cours",
+      "seasonRanges": [
+        {
+          "from": 1991,
+          "to": 1991
+        }
+      ],
+      "svgPath": "circuits/minimal/white/magny-cours-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-magny-cours-2",
+      "circuitId": "magny_cours",
+      "circuitName": "Circuit de Nevers Magny-Cours",
+      "seasonRanges": [
+        {
+          "from": 1992,
+          "to": 2002
+        }
+      ],
+      "svgPath": "circuits/minimal/white/magny-cours-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-magny-cours-3",
+      "circuitId": "magny_cours",
+      "circuitName": "Circuit de Nevers Magny-Cours",
+      "seasonRanges": [
+        {
+          "from": 2003,
+          "to": 2008
+        }
+      ],
+      "svgPath": "circuits/minimal/white/magny-cours-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-marina-bay-1",
+      "circuitId": "marina_bay",
+      "circuitName": "Marina Bay Street Circuit",
       "seasonRanges": [
         {
           "from": 2008,
           "to": 2012
         }
       ],
-      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "svgPath": "circuits/minimal/white/marina-bay-1.svg",
       "configurationEvidenceUrls": [
-        "https://commons.wikimedia.org/wiki/File:Circuit_Valencia_2008_Infobox.svg"
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
       ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-marina-bay-2",
+      "circuitId": "marina_bay",
+      "circuitName": "Marina Bay Street Circuit",
+      "seasonRanges": [
+        {
+          "from": 2013,
+          "to": 2014
+        }
+      ],
+      "svgPath": "circuits/minimal/white/marina-bay-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-marina-bay-3",
+      "circuitId": "marina_bay",
+      "circuitName": "Marina Bay Street Circuit",
+      "seasonRanges": [
+        {
+          "from": 2015,
+          "to": 2019
+        },
+        {
+          "from": 2022,
+          "to": 2022
+        }
+      ],
+      "svgPath": "circuits/minimal/white/marina-bay-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-marina-bay-4",
+      "circuitId": "marina_bay",
+      "circuitName": "Marina Bay Street Circuit",
+      "seasonRanges": [
+        {
+          "from": 2023,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/marina-bay-4.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-melbourne-1",
+      "circuitId": "albert_park",
+      "circuitName": "Melbourne Grand Prix Circuit",
+      "seasonRanges": [
+        {
+          "from": 1996,
+          "to": 2019
+        }
+      ],
+      "svgPath": "circuits/minimal/white/melbourne-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-melbourne-2",
+      "circuitId": "albert_park",
+      "circuitName": "Melbourne Grand Prix Circuit",
+      "seasonRanges": [
+        {
+          "from": 2022,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/melbourne-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-mexico-city-1",
+      "circuitId": "rodriguez",
+      "circuitName": "Aut\u00f3dromo Hermanos Rodr\u00edguez",
+      "seasonRanges": [
+        {
+          "from": 1963,
+          "to": 1970
+        }
+      ],
+      "svgPath": "circuits/minimal/white/mexico-city-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-mexico-city-2",
+      "circuitId": "rodriguez",
+      "circuitName": "Aut\u00f3dromo Hermanos Rodr\u00edguez",
+      "seasonRanges": [
+        {
+          "from": 1986,
+          "to": 1992
+        }
+      ],
+      "svgPath": "circuits/minimal/white/mexico-city-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-mexico-city-3",
+      "circuitId": "rodriguez",
+      "circuitName": "Aut\u00f3dromo Hermanos Rodr\u00edguez",
+      "seasonRanges": [
+        {
+          "from": 2015,
+          "to": 2019
+        },
+        {
+          "from": 2021,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/mexico-city-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-miami-1",
+      "circuitId": "miami",
+      "circuitName": "Miami International Autodrome",
+      "seasonRanges": [
+        {
+          "from": 2022,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/miami-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monaco-1",
+      "circuitId": "monaco",
+      "circuitName": "Circuit de Monaco",
+      "seasonRanges": [
+        {
+          "from": 1950,
+          "to": 1950
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monaco-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monaco-2",
+      "circuitId": "monaco",
+      "circuitName": "Circuit de Monaco",
+      "seasonRanges": [
+        {
+          "from": 1955,
+          "to": 1972
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monaco-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monaco-3",
+      "circuitId": "monaco",
+      "circuitName": "Circuit de Monaco",
+      "seasonRanges": [
+        {
+          "from": 1973,
+          "to": 1975
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monaco-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monaco-4",
+      "circuitId": "monaco",
+      "circuitName": "Circuit de Monaco",
+      "seasonRanges": [
+        {
+          "from": 1976,
+          "to": 1985
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monaco-4.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monaco-5",
+      "circuitId": "monaco",
+      "circuitName": "Circuit de Monaco",
+      "seasonRanges": [
+        {
+          "from": 1986,
+          "to": 2002
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monaco-5.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monaco-6",
+      "circuitId": "monaco",
+      "circuitName": "Circuit de Monaco",
+      "seasonRanges": [
+        {
+          "from": 2003,
+          "to": 2019
+        },
+        {
+          "from": 2021,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monaco-6.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monsanto-1",
+      "circuitId": "monsanto",
+      "circuitName": "Circuito de Monsanto",
+      "seasonRanges": [
+        {
+          "from": 1959,
+          "to": 1959
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monsanto-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-montjuic-1",
+      "circuitId": "montjuic",
+      "circuitName": "Circuito de Montju\u00efc",
+      "seasonRanges": [
+        {
+          "from": 1969,
+          "to": 1969
+        },
+        {
+          "from": 1971,
+          "to": 1971
+        },
+        {
+          "from": 1973,
+          "to": 1973
+        },
+        {
+          "from": 1975,
+          "to": 1975
+        }
+      ],
+      "svgPath": "circuits/minimal/white/montjuic-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-montreal-1",
+      "circuitId": "villeneuve",
+      "circuitName": "Circuit Gilles Villeneuve",
+      "seasonRanges": [
+        {
+          "from": 1978,
+          "to": 1978
+        }
+      ],
+      "svgPath": "circuits/minimal/white/montreal-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-montreal-2",
+      "circuitId": "villeneuve",
+      "circuitName": "Circuit Gilles Villeneuve",
+      "seasonRanges": [
+        {
+          "from": 1979,
+          "to": 1986
+        }
+      ],
+      "svgPath": "circuits/minimal/white/montreal-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-montreal-3",
+      "circuitId": "villeneuve",
+      "circuitName": "Circuit Gilles Villeneuve",
+      "seasonRanges": [
+        {
+          "from": 1988,
+          "to": 1993
+        }
+      ],
+      "svgPath": "circuits/minimal/white/montreal-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-montreal-4",
+      "circuitId": "villeneuve",
+      "circuitName": "Circuit Gilles Villeneuve",
+      "seasonRanges": [
+        {
+          "from": 1994,
+          "to": 1995
+        }
+      ],
+      "svgPath": "circuits/minimal/white/montreal-4.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-montreal-5",
+      "circuitId": "villeneuve",
+      "circuitName": "Circuit Gilles Villeneuve",
+      "seasonRanges": [
+        {
+          "from": 1996,
+          "to": 2001
+        }
+      ],
+      "svgPath": "circuits/minimal/white/montreal-5.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-montreal-6",
+      "circuitId": "villeneuve",
+      "circuitName": "Circuit Gilles Villeneuve",
+      "seasonRanges": [
+        {
+          "from": 2002,
+          "to": 2019
+        },
+        {
+          "from": 2022,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/montreal-6.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-mont-tremblant-1",
+      "circuitId": "tremblant",
+      "circuitName": "Circuit Mont-Tremblant",
+      "seasonRanges": [
+        {
+          "from": 1968,
+          "to": 1968
+        },
+        {
+          "from": 1970,
+          "to": 1970
+        }
+      ],
+      "svgPath": "circuits/minimal/white/mont-tremblant-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monza-1",
+      "circuitId": "monza",
+      "circuitName": "Autodromo Nazionale Monza",
+      "seasonRanges": [
+        {
+          "from": 1950,
+          "to": 1954
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monza-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monza-2",
+      "circuitId": "monza",
+      "circuitName": "Autodromo Nazionale Monza",
+      "seasonRanges": [
+        {
+          "from": 1955,
+          "to": 1956
+        },
+        {
+          "from": 1960,
+          "to": 1961
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monza-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monza-3",
+      "circuitId": "monza",
+      "circuitName": "Autodromo Nazionale Monza",
+      "seasonRanges": [
+        {
+          "from": 1957,
+          "to": 1959
+        },
+        {
+          "from": 1962,
+          "to": 1971
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monza-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monza-4",
+      "circuitId": "monza",
+      "circuitName": "Autodromo Nazionale Monza",
+      "seasonRanges": [
+        {
+          "from": 1972,
+          "to": 1973
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monza-4.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monza-5",
+      "circuitId": "monza",
+      "circuitName": "Autodromo Nazionale Monza",
+      "seasonRanges": [
+        {
+          "from": 1974,
+          "to": 1975
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monza-5.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monza-6",
+      "circuitId": "monza",
+      "circuitName": "Autodromo Nazionale Monza",
+      "seasonRanges": [
+        {
+          "from": 1976,
+          "to": 1979
+        },
+        {
+          "from": 1981,
+          "to": 1999
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monza-6.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-monza-7",
+      "circuitId": "monza",
+      "circuitName": "Autodromo Nazionale Monza",
+      "seasonRanges": [
+        {
+          "from": 2000,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/monza-7.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-mosport-1",
+      "circuitId": "mosport",
+      "circuitName": "Canadian Tire Motorsport Park",
+      "seasonRanges": [
+        {
+          "from": 1967,
+          "to": 1967
+        },
+        {
+          "from": 1969,
+          "to": 1969
+        },
+        {
+          "from": 1971,
+          "to": 1974
+        },
+        {
+          "from": 1976,
+          "to": 1977
+        }
+      ],
+      "svgPath": "circuits/minimal/white/mosport-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-mugello-1",
+      "circuitId": "mugello",
+      "circuitName": "Autodromo Internazionale del Mugello",
+      "seasonRanges": [
+        {
+          "from": 2020,
+          "to": 2020
+        }
+      ],
+      "svgPath": "circuits/minimal/white/mugello-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-nivelles-1",
+      "circuitId": "nivelles",
+      "circuitName": "Nivelles-Baulers",
+      "seasonRanges": [
+        {
+          "from": 1972,
+          "to": 1972
+        },
+        {
+          "from": 1974,
+          "to": 1974
+        }
+      ],
+      "svgPath": "circuits/minimal/white/nivelles-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-nurburgring-1",
+      "circuitId": "nurburgring",
+      "circuitName": "N\u00fcrburgring",
+      "seasonRanges": [
+        {
+          "from": 1951,
+          "to": 1958
+        },
+        {
+          "from": 1961,
+          "to": 1969
+        },
+        {
+          "from": 1971,
+          "to": 1976
+        }
+      ],
+      "svgPath": "circuits/minimal/white/nurburgring-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-nurburgring-2",
+      "circuitId": "nurburgring",
+      "circuitName": "N\u00fcrburgring",
+      "seasonRanges": [
+        {
+          "from": 1984,
+          "to": 1985
+        }
+      ],
+      "svgPath": "circuits/minimal/white/nurburgring-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-nurburgring-3",
+      "circuitId": "nurburgring",
+      "circuitName": "N\u00fcrburgring",
+      "seasonRanges": [
+        {
+          "from": 1995,
+          "to": 2001
+        }
+      ],
+      "svgPath": "circuits/minimal/white/nurburgring-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-nurburgring-4",
+      "circuitId": "nurburgring",
+      "circuitName": "N\u00fcrburgring",
+      "seasonRanges": [
+        {
+          "from": 2002,
+          "to": 2007
+        },
+        {
+          "from": 2009,
+          "to": 2009
+        },
+        {
+          "from": 2011,
+          "to": 2011
+        },
+        {
+          "from": 2013,
+          "to": 2013
+        },
+        {
+          "from": 2020,
+          "to": 2020
+        }
+      ],
+      "svgPath": "circuits/minimal/white/nurburgring-4.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-paul-ricard-1",
+      "circuitId": "ricard",
+      "circuitName": "Circuit Paul Ricard",
+      "seasonRanges": [
+        {
+          "from": 1971,
+          "to": 1971
+        },
+        {
+          "from": 1973,
+          "to": 1973
+        },
+        {
+          "from": 1975,
+          "to": 1976
+        },
+        {
+          "from": 1978,
+          "to": 1978
+        },
+        {
+          "from": 1980,
+          "to": 1980
+        },
+        {
+          "from": 1982,
+          "to": 1983
+        },
+        {
+          "from": 1985,
+          "to": 1985
+        }
+      ],
+      "svgPath": "circuits/minimal/white/paul-ricard-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-paul-ricard-2",
+      "circuitId": "ricard",
+      "circuitName": "Circuit Paul Ricard",
+      "seasonRanges": [
+        {
+          "from": 1986,
+          "to": 1990
+        }
+      ],
+      "svgPath": "circuits/minimal/white/paul-ricard-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-paul-ricard-3",
+      "circuitId": "ricard",
+      "circuitName": "Circuit Paul Ricard",
+      "seasonRanges": [
+        {
+          "from": 2018,
+          "to": 2019
+        },
+        {
+          "from": 2021,
+          "to": 2022
+        }
+      ],
+      "svgPath": "circuits/minimal/white/paul-ricard-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-pedralbes-1",
+      "circuitId": "pedralbes",
+      "circuitName": "Pedralbes Circuit",
+      "seasonRanges": [
+        {
+          "from": 1951,
+          "to": 1951
+        },
+        {
+          "from": 1954,
+          "to": 1954
+        }
+      ],
+      "svgPath": "circuits/minimal/white/pedralbes-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-pescara-1",
+      "circuitId": "pescara",
+      "circuitName": "Pescara Circuit",
+      "seasonRanges": [
+        {
+          "from": 1957,
+          "to": 1957
+        }
+      ],
+      "svgPath": "circuits/minimal/white/pescara-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-phoenix-1",
+      "circuitId": "phoenix",
+      "circuitName": "Phoenix Street Circuit",
+      "seasonRanges": [
+        {
+          "from": 1989,
+          "to": 1990
+        }
+      ],
+      "svgPath": "circuits/minimal/white/phoenix-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-phoenix-2",
+      "circuitId": "phoenix",
+      "circuitName": "Phoenix Street Circuit",
+      "seasonRanges": [
+        {
+          "from": 1991,
+          "to": 1991
+        }
+      ],
+      "svgPath": "circuits/minimal/white/phoenix-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-portimao-1",
+      "circuitId": "portimao",
+      "circuitName": "Algarve International Circuit",
+      "seasonRanges": [
+        {
+          "from": 2020,
+          "to": 2021
+        }
+      ],
+      "svgPath": "circuits/minimal/white/portimao-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-porto-1",
+      "circuitId": "boavista",
+      "circuitName": "Circuito da Boavista",
+      "seasonRanges": [
+        {
+          "from": 1958,
+          "to": 1958
+        },
+        {
+          "from": 1960,
+          "to": 1960
+        }
+      ],
+      "svgPath": "circuits/minimal/white/porto-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-reims-1",
+      "circuitId": "reims",
+      "circuitName": "Reims-Gueux",
+      "seasonRanges": [
+        {
+          "from": 1950,
+          "to": 1951
+        }
+      ],
+      "svgPath": "circuits/minimal/white/reims-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-reims-2",
+      "circuitId": "reims",
+      "circuitName": "Reims-Gueux",
+      "seasonRanges": [
+        {
+          "from": 1953,
+          "to": 1954
+        },
+        {
+          "from": 1956,
+          "to": 1956
+        },
+        {
+          "from": 1958,
+          "to": 1961
+        },
+        {
+          "from": 1963,
+          "to": 1963
+        },
+        {
+          "from": 1966,
+          "to": 1966
+        }
+      ],
+      "svgPath": "circuits/minimal/white/reims-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-riverside-1",
+      "circuitId": "riverside",
+      "circuitName": "Riverside International Raceway",
+      "seasonRanges": [
+        {
+          "from": 1960,
+          "to": 1960
+        }
+      ],
+      "svgPath": "circuits/minimal/white/riverside-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-rouen-1",
+      "circuitId": "essarts",
+      "circuitName": "Rouen-Les-Essarts",
+      "seasonRanges": [
+        {
+          "from": 1952,
+          "to": 1952
+        }
+      ],
+      "svgPath": "circuits/minimal/white/rouen-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-rouen-2",
+      "circuitId": "essarts",
+      "circuitName": "Rouen-Les-Essarts",
+      "seasonRanges": [
+        {
+          "from": 1957,
+          "to": 1957
+        },
+        {
+          "from": 1962,
+          "to": 1962
+        },
+        {
+          "from": 1964,
+          "to": 1964
+        },
+        {
+          "from": 1968,
+          "to": 1968
+        }
+      ],
+      "svgPath": "circuits/minimal/white/rouen-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-sebring-1",
+      "circuitId": "sebring",
+      "circuitName": "Sebring International Raceway",
+      "seasonRanges": [
+        {
+          "from": 1959,
+          "to": 1959
+        }
+      ],
+      "svgPath": "circuits/minimal/white/sebring-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-sepang-1",
+      "circuitId": "sepang",
+      "circuitName": "Sepang International Circuit",
+      "seasonRanges": [
+        {
+          "from": 1999,
+          "to": 2017
+        },
+        {
+          "from": 2026,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/sepang-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json",
+        "https://www.formula1.com/en/latest/article/circuit-guide-everything-you-need-to-know-about-the-sepang-international-circuit.2KTLvyxBXmwVftSJxmYeZ2",
+        "https://corp.formula1.com/formula-1-and-fia-confirm-that-malaysia-will-join-the-2026-calendar-as-host-venue-for-the-bahrain-grand-prix/",
+        "https://www.sepangcircuit.com/architecture"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits. Explicit 2026 review: official F1 circuit guide confirms the returning 5.543km, 15-turn GP layout and retains the 2017 lap record. The minimal outline is inferred unchanged; surface/camber/pit lane details are not represented.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-shanghai-1",
+      "circuitId": "shanghai",
+      "circuitName": "Shanghai International Circuit",
+      "seasonRanges": [
+        {
+          "from": 2004,
+          "to": 2019
+        },
+        {
+          "from": 2024,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/shanghai-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json",
+        "https://www.formula1.com/en/racing/2025/china",
+        "https://www.formula1.com/en/latest/article/need-to-know-the-most-important-facts-stats-and-trivia-ahead-of-the-2025-Chinese-Grand-Prix.6GEncmIqVxHd6TyKdEQElz"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits. Shanghai 2024-2025 gap in upstream seasons reviewed against official F1 race and circuit guides: unchanged 5.451km GP outline.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-silverstone-1",
+      "circuitId": "silverstone",
+      "circuitName": "Silverstone Circuit",
+      "seasonRanges": [
+        {
+          "from": 1950,
+          "to": 1954
+        },
+        {
+          "from": 1956,
+          "to": 1956
+        },
+        {
+          "from": 1958,
+          "to": 1958
+        },
+        {
+          "from": 1960,
+          "to": 1960
+        },
+        {
+          "from": 1963,
+          "to": 1963
+        },
+        {
+          "from": 1965,
+          "to": 1965
+        },
+        {
+          "from": 1967,
+          "to": 1967
+        },
+        {
+          "from": 1969,
+          "to": 1969
+        },
+        {
+          "from": 1971,
+          "to": 1971
+        },
+        {
+          "from": 1973,
+          "to": 1973
+        }
+      ],
+      "svgPath": "circuits/minimal/white/silverstone-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-silverstone-2",
+      "circuitId": "silverstone",
+      "circuitName": "Silverstone Circuit",
+      "seasonRanges": [
+        {
+          "from": 1975,
+          "to": 1975
+        },
+        {
+          "from": 1977,
+          "to": 1977
+        },
+        {
+          "from": 1979,
+          "to": 1979
+        },
+        {
+          "from": 1981,
+          "to": 1981
+        },
+        {
+          "from": 1983,
+          "to": 1983
+        },
+        {
+          "from": 1985,
+          "to": 1985
+        }
+      ],
+      "svgPath": "circuits/minimal/white/silverstone-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-silverstone-3",
+      "circuitId": "silverstone",
+      "circuitName": "Silverstone Circuit",
+      "seasonRanges": [
+        {
+          "from": 1987,
+          "to": 1990
+        }
+      ],
+      "svgPath": "circuits/minimal/white/silverstone-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-silverstone-4",
+      "circuitId": "silverstone",
+      "circuitName": "Silverstone Circuit",
+      "seasonRanges": [
+        {
+          "from": 1991,
+          "to": 1993
+        }
+      ],
+      "svgPath": "circuits/minimal/white/silverstone-4.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-silverstone-5",
+      "circuitId": "silverstone",
+      "circuitName": "Silverstone Circuit",
+      "seasonRanges": [
+        {
+          "from": 1994,
+          "to": 1995
+        }
+      ],
+      "svgPath": "circuits/minimal/white/silverstone-5.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-silverstone-6",
+      "circuitId": "silverstone",
+      "circuitName": "Silverstone Circuit",
+      "seasonRanges": [
+        {
+          "from": 1996,
+          "to": 1996
+        }
+      ],
+      "svgPath": "circuits/minimal/white/silverstone-6.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-silverstone-7",
+      "circuitId": "silverstone",
+      "circuitName": "Silverstone Circuit",
+      "seasonRanges": [
+        {
+          "from": 1997,
+          "to": 2009
+        }
+      ],
+      "svgPath": "circuits/minimal/white/silverstone-7.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-silverstone-8",
+      "circuitId": "silverstone",
+      "circuitName": "Silverstone Circuit",
+      "seasonRanges": [
+        {
+          "from": 2010,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/silverstone-8.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-sochi-1",
+      "circuitId": "sochi",
+      "circuitName": "Sochi Autodrom",
+      "seasonRanges": [
+        {
+          "from": 2014,
+          "to": 2021
+        }
+      ],
+      "svgPath": "circuits/minimal/white/sochi-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-spa-francorchamps-1",
+      "circuitId": "spa",
+      "circuitName": "Circuit de Spa-Francorchamps",
+      "seasonRanges": [
+        {
+          "from": 1950,
+          "to": 1956
+        },
+        {
+          "from": 1958,
+          "to": 1968
+        },
+        {
+          "from": 1970,
+          "to": 1970
+        }
+      ],
+      "svgPath": "circuits/minimal/white/spa-francorchamps-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-spa-francorchamps-2",
+      "circuitId": "spa",
+      "circuitName": "Circuit de Spa-Francorchamps",
+      "seasonRanges": [
+        {
+          "from": 1983,
+          "to": 1983
+        },
+        {
+          "from": 1985,
+          "to": 2002
+        }
+      ],
+      "svgPath": "circuits/minimal/white/spa-francorchamps-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-spa-francorchamps-3",
+      "circuitId": "spa",
+      "circuitName": "Circuit de Spa-Francorchamps",
+      "seasonRanges": [
+        {
+          "from": 2004,
+          "to": 2005
+        }
+      ],
+      "svgPath": "circuits/minimal/white/spa-francorchamps-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-spa-francorchamps-4",
+      "circuitId": "spa",
+      "circuitName": "Circuit de Spa-Francorchamps",
+      "seasonRanges": [
+        {
+          "from": 2007,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/spa-francorchamps-4.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-spielberg-1",
+      "circuitId": "red_bull_ring",
+      "circuitName": "Red Bull Ring",
+      "seasonRanges": [
+        {
+          "from": 1970,
+          "to": 1976
+        }
+      ],
+      "svgPath": "circuits/minimal/white/spielberg-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-spielberg-2",
+      "circuitId": "red_bull_ring",
+      "circuitName": "Red Bull Ring",
+      "seasonRanges": [
+        {
+          "from": 1977,
+          "to": 1987
+        }
+      ],
+      "svgPath": "circuits/minimal/white/spielberg-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-spielberg-3",
+      "circuitId": "red_bull_ring",
+      "circuitName": "Red Bull Ring",
+      "seasonRanges": [
+        {
+          "from": 1997,
+          "to": 2003
+        },
+        {
+          "from": 2014,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/spielberg-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-suzuka-1",
+      "circuitId": "suzuka",
+      "circuitName": "Suzuka Circuit",
+      "seasonRanges": [
+        {
+          "from": 1987,
+          "to": 2002
+        }
+      ],
+      "svgPath": "circuits/minimal/white/suzuka-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-suzuka-2",
+      "circuitId": "suzuka",
+      "circuitName": "Suzuka Circuit",
+      "seasonRanges": [
+        {
+          "from": 2003,
+          "to": 2006
+        },
+        {
+          "from": 2009,
+          "to": 2019
+        },
+        {
+          "from": 2022,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/suzuka-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-valencia-1",
+      "circuitId": "valencia",
+      "circuitName": "Valencia Street Circuit",
+      "seasonRanges": [
+        {
+          "from": 2008,
+          "to": 2012
+        }
+      ],
+      "svgPath": "circuits/minimal/white/valencia-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-watkins-glen-1",
+      "circuitId": "watkins_glen",
+      "circuitName": "Watkins Glen International",
+      "seasonRanges": [
+        {
+          "from": 1961,
+          "to": 1970
+        }
+      ],
+      "svgPath": "circuits/minimal/white/watkins-glen-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-watkins-glen-2",
+      "circuitId": "watkins_glen",
+      "circuitName": "Watkins Glen International",
+      "seasonRanges": [
+        {
+          "from": 1971,
+          "to": 1974
+        }
+      ],
+      "svgPath": "circuits/minimal/white/watkins-glen-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-watkins-glen-3",
+      "circuitId": "watkins_glen",
+      "circuitName": "Watkins Glen International",
+      "seasonRanges": [
+        {
+          "from": 1975,
+          "to": 1980
+        }
+      ],
+      "svgPath": "circuits/minimal/white/watkins-glen-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-yas-marina-1",
+      "circuitId": "yas_marina",
+      "circuitName": "Yas Marina Circuit",
+      "seasonRanges": [
+        {
+          "from": 2009,
+          "to": 2020
+        }
+      ],
+      "svgPath": "circuits/minimal/white/yas-marina-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-yas-marina-2",
+      "circuitId": "yas_marina",
+      "circuitName": "Yas Marina Circuit",
+      "seasonRanges": [
+        {
+          "from": 2021,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/yas-marina-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-yeongam-1",
+      "circuitId": "yeongam",
+      "circuitName": "Korea International Circuit",
+      "seasonRanges": [
+        {
+          "from": 2010,
+          "to": 2013
+        }
+      ],
+      "svgPath": "circuits/minimal/white/yeongam-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-zandvoort-1",
+      "circuitId": "zandvoort",
+      "circuitName": "Circuit Park Zandvoort",
+      "seasonRanges": [
+        {
+          "from": 1952,
+          "to": 1953
+        },
+        {
+          "from": 1955,
+          "to": 1955
+        },
+        {
+          "from": 1958,
+          "to": 1971
+        }
+      ],
+      "svgPath": "circuits/minimal/white/zandvoort-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-zandvoort-2",
+      "circuitId": "zandvoort",
+      "circuitName": "Circuit Park Zandvoort",
+      "seasonRanges": [
+        {
+          "from": 1973,
+          "to": 1978
+        }
+      ],
+      "svgPath": "circuits/minimal/white/zandvoort-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-zandvoort-3",
+      "circuitId": "zandvoort",
+      "circuitName": "Circuit Park Zandvoort",
+      "seasonRanges": [
+        {
+          "from": 1979,
+          "to": 1979
+        }
+      ],
+      "svgPath": "circuits/minimal/white/zandvoort-3.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-zandvoort-4",
+      "circuitId": "zandvoort",
+      "circuitName": "Circuit Park Zandvoort",
+      "seasonRanges": [
+        {
+          "from": 1980,
+          "to": 1985
+        }
+      ],
+      "svgPath": "circuits/minimal/white/zandvoort-4.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-zandvoort-5",
+      "circuitId": "zandvoort",
+      "circuitName": "Circuit Park Zandvoort",
+      "seasonRanges": [
+        {
+          "from": 2021,
+          "to": 2026
+        }
+      ],
+      "svgPath": "circuits/minimal/white/zandvoort-5.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-zeltweg-1",
+      "circuitId": "zeltweg",
+      "circuitName": "Zeltweg",
+      "seasonRanges": [
+        {
+          "from": 1964,
+          "to": 1964
+        }
+      ],
+      "svgPath": "circuits/minimal/white/zeltweg-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-zolder-1",
+      "circuitId": "zolder",
+      "circuitName": "Circuit Zolder",
+      "seasonRanges": [
+        {
+          "from": 1973,
+          "to": 1973
+        }
+      ],
+      "svgPath": "circuits/minimal/white/zolder-1.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "roy-zolder-2",
+      "circuitId": "zolder",
+      "circuitName": "Circuit Zolder",
+      "seasonRanges": [
+        {
+          "from": 1975,
+          "to": 1982
+        },
+        {
+          "from": 1984,
+          "to": 1984
+        }
+      ],
+      "svgPath": "circuits/minimal/white/zolder-2.svg",
+      "configurationEvidenceUrls": [
+        "https://github.com/f1db/f1-circuits-svg/blob/c1bcd6fcb1b6fdb662136daa6bc19f3a2f870f65/circuits.json"
+      ],
+      "provenance": "Jules Roy circuit collection; author and CC BY 4.0 copyright notice verified in the pinned repository LICENSE. Season mapping from the same pinned circuits.json. Minimal white variant, no SVG edits.",
       "presentation": "white-silhouette"
     }
   ],
@@ -150,7 +3153,8 @@
       "season": 2020,
       "round": 16,
       "reason": "Sakhir used the Outer Circuit; the normal Grand Prix outline must not be shown.",
-      "evidenceUrl": "https://www.formula1.com/en/racing/2020/sakhir"
+      "evidenceUrl": "https://www.formula1.com/en/racing/2020/sakhir",
+      "layoutId": "roy-bahrain-3"
     }
   ],
   "pendingSources": [

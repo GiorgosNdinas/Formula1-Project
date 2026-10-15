@@ -1,0 +1,76 @@
+<main class="credits-page">
+  <a
+    routerLink="/results"
+    class="back-link">
+    ← Race results
+  </a>
+  <h1>Circuit artwork credits</h1>
+  <p class="introduction">
+    Circuit layouts are by ROY Jules, from the F1 Circuits SVG collection,
+    shared under Creative Commons Attribution 4.0 International. Copyright ©
+    2024–2026 ROY Jules. Original minimal white SVGs are loaded from an external
+    host and displayed unchanged, scaled to fit. The author does not endorse
+    this website.
+  </p>
+  <p>
+    <a
+      href="https://creativecommons.org/licenses/by/4.0/"
+      target="_blank"
+      rel="noopener noreferrer">
+      Read the CC BY 4.0 license
+    </a>
+    ·
+    <a
+      href="https://github.com/f1db/f1-circuits-svg"
+      target="_blank"
+      rel="noopener noreferrer">
+      Source collection
+    </a>
+  </p>
+  <p class="introduction">
+    Season ranges describe the reviewed track outline, rather than pit lane,
+    resurfacing, or start line changes. Unsupported configurations show a
+    placeholder instead of an unrelated circuit.
+  </p>
+  <div class="credits-grid">
+    @for (entry of entries; track entry.id) {
+      <article
+        [id]="entry.id"
+        class="credit-card">
+        <h2>{{ entry.circuitName }}</h2>
+        <p class="layout-id">{{ entry.id }}</p>
+        <p>{{ entry.copyright }} · {{ entry.license }}</p>
+        <p>{{ entry.modifications }}</p>
+        <p>
+          Seasons:
+          @for (range of entry.seasonRanges; track $index) {
+            <span>{{ range.from }}–{{ range.to }}{{ $last ? '' : ', ' }}</span>
+          }
+          @if (entry.rounds) {
+            <span>· Round {{ entry.rounds.join(', ') }}</span>
+          }
+        </p>
+        <div class="credit-links">
+          <a
+            [href]="entry.sourceUrl"
+            target="_blank"
+            rel="noopener noreferrer">
+            Original artwork
+          </a>
+          <a
+            [href]="entry.licenseEvidenceUrl"
+            target="_blank"
+            rel="noopener noreferrer">
+            Copyright notice
+          </a>
+          <a
+            [href]="entry.licenseUrl"
+            target="_blank"
+            rel="noopener noreferrer">
+            License
+          </a>
+        </div>
+      </article>
+    }
+  </div>
+</main>

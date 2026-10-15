@@ -13,9 +13,12 @@ export interface CircuitLayout {
   rounds?: number[];
   svgUrl: string;
   sourceUrl: string;
-  license: 'CC0-1.0' | 'PD-self';
+  license: 'CC0-1.0' | 'PD-self' | 'CC-BY-4.0';
+  licenseUrl?: string;
+  copyright?: string;
+  modifications?: string;
   licenseEvidenceUrl: string;
-  attributionRequired: false;
+  attributionRequired: boolean;
   author: string;
   provenance: string;
   configurationEvidenceUrls: string[];

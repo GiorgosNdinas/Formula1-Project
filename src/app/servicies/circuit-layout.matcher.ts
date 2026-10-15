@@ -25,8 +25,15 @@ export function selectCircuitLayout(
   const eligible = catalog.entries.filter(
     entry =>
       entry.circuitId === circuitId &&
-      entry.attributionRequired === false &&
-      ['CC0-1.0', 'PD-self'].includes(entry.license) &&
+      ((entry.attributionRequired === false &&
+        ['CC0-1.0', 'PD-self'].includes(entry.license)) ||
+        (entry.license === 'CC-BY-4.0' &&
+          entry.attributionRequired === true &&
+          !!entry.author &&
+          !!entry.sourceUrl &&
+          !!entry.licenseEvidenceUrl &&
+          entry.licenseUrl ===
+            'https://creativecommons.org/licenses/by/4.0/')) &&
       entry.seasonRanges.some(
         range => season >= range.from && season <= range.to
       )

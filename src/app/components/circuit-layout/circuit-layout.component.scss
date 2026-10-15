@@ -16,8 +16,28 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  // Preserve transparency while rendering the reviewed monochrome outline white.
-  filter: brightness(0) invert(1);
+  // Preserve the original white variant's colors and transparency.
+}
+
+.circuit-credit {
+  margin: 8px 0 0;
+  padding: 0 8px;
+  color: #ddd;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.circuit-credit a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.circuit-credit a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 .pending {

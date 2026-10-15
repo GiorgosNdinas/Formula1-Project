@@ -1,39 +1,21 @@
 import { XMLParser, XMLValidator } from 'fast-xml-parser';
-import { normalizeLicense } from './photo-utils.mjs';
+import { createHash } from 'node:crypto';
 
-/** Require explicit attribution-free terms and original-work provenance. */
-export function verifyCircuitLicense(metadata) {
-  const value = key => String(metadata?.[key]?.value ?? '');
-  const attribution = value('AttributionRequired').toLowerCase();
-  const ownWork =
-    value('Credit')
-      .replace(/<[^>]*>/g, '')
-      .trim()
-      .toLowerCase() === 'own work';
+/** Require the exact reviewed repository copyright and CC BY license notice. */
+export function verifyCircuitRepositoryLicense(text, repository) {
+  const hash = createHash('sha256').update(text).digest('hex');
   if (
-    attribution !== 'false' ||
-    !ownWork ||
-    !value('Artist').trim() ||
-    value('Restrictions').trim()
+    repository.license !== 'CC-BY-4.0' ||
+    repository.licenseUrl !== 'https://creativecommons.org/licenses/by/4.0/' ||
+    hash !== repository.licenseSha256 ||
+    !text.includes(repository.copyright) ||
+    !text.includes(
+      'Creative Commons Attribution 4.0 International Public License'
+    )
   ) {
-    throw new Error(
-      'Attribution-free license or original-work provenance not verified'
-    );
+    throw new Error('Repository copyright or license changed');
   }
-  if (
-    normalizeLicense(value('LicenseUrl')) ===
-    'https://creativecommons.org/publicdomain/zero/1.0/'
-  )
-    return 'CC0-1.0';
-  if (
-    value('Categories').split('|').includes('PD-self') &&
-    value('Copyrighted').toLowerCase() === 'false' &&
-    value('License') === 'pd'
-  )
-    return 'PD-self';
-  throw new Error(
-    'Only verified CC0 and explicit PD-self releases are accepted'
-  );
+  return repository.license;
 }
 
 /** Approved external origins only; SVGs are never inserted as raw HTML. */
@@ -42,7 +24,11 @@ export function safeCircuitUrl(value) {
     const url = new URL(value);
     return (
       url.protocol === 'https:' &&
-      url.hostname === 'upload.wikimedia.org' &&
+      (url.hostname === 'upload.wikimedia.org' ||
+        (url.hostname === 'raw.githubusercontent.com' &&
+          /^\/f1db\/f1-circuits-svg\/[a-f0-9]{40}\/circuits\/minimal\/white\/[a-z0-9-]+\.svg$/.test(
+            url.pathname
+          ))) &&
       !url.username &&
       !url.password &&
       !url.port &&

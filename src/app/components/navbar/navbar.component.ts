@@ -55,6 +55,12 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
           (click)="open = false">
           Winners
         </a>
+        <a
+          routerLink="/circuit-credits"
+          routerLinkActive="active"
+          (click)="open = false">
+          Circuit credits
+        </a>
       </div>
     </nav>
   `,

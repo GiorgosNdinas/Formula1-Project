@@ -1,4 +1,5 @@
 import { Component, Input, computed, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { CircuitLayoutService } from '../../servicies/circuit-layout.service';
 
 /**
@@ -9,6 +10,7 @@ import { CircuitLayoutService } from '../../servicies/circuit-layout.service';
 @Component({
   selector: 'app-circuit-layout',
   standalone: true,
+  imports: [RouterLink],
   templateUrl: './circuit-layout.component.html',
   styleUrl: './circuit-layout.component.scss'
 })
