@@ -1,15 +1,14 @@
-import { Component, Signal, computed } from '@angular/core';
+import { Component, computed } from '@angular/core';
 
 import { TableComponent } from '../../components/table/table.component';
 import { SeasonSelectorComponent } from '../../components/selector/season-selector.component';
 import { F1ApiService } from '../../servicies/f1-api.service';
 
 import { ToolbarModule } from 'primeng/toolbar';
-import { CardModule } from 'primeng/card';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
-import { PanelModule } from 'primeng/panel';
+import { CircuitLayoutComponent } from '../../components/circuit-layout/circuit-layout.component';
 
 /**
  * Coordinates round selection, race information, results and loading/error states.
@@ -50,99 +49,143 @@ export class RoundSelectorComponent {
   }
 }
 
+/**
+ * Shows the selected race in three columns: race details, verified layout and location.
+ * The selected race is derived once from the existing Jolpica response.
+ */
 @Component({
   selector: 'app-round-template',
   standalone: true,
-  imports: [PanelModule, RoundSelectorComponent],
+  imports: [RoundSelectorComponent, CircuitLayoutComponent],
   template: `
-    <!-- Panel component with a fixed header and content -->
-    <p-panel [toggleable]="false">
-      <!-- Header template -->
-      <ng-template pTemplate="header">
-        <!-- Flex container for alignment -->
-        <div class="flex align-items-center gap-2">
-          <!-- Display selected round and total number of rounds -->
-          <span class="font-bold">
-            Round:
-            <app-round-selector></app-round-selector>
-            /{{
-              this.f1ApiService.f1Rounds()?.MRData?.RaceTable?.Races?.length
-            }}
-          </span>
+    <section
+      class="race-information"
+      aria-label="Selected Grand Prix information">
+      <div class="race-details">
+        <div class="round-control">
+          <span>Round:</span>
+          <app-round-selector></app-round-selector>
+          <span>/ {{ rounds().length }}</span>
         </div>
-      </ng-template>
-
-      <!-- Icons template -->
-      <ng-template pTemplate="icons">
-        <!-- Loop through races to display country flag for the selected round -->
-        @for (
-          race of this.f1ApiService.f1Rounds()?.MRData?.RaceTable?.Races;
-          track $index
-        ) {
-          @if (race.round === this.f1ApiService.selectedRound()) {
+        @if (race(); as selected) {
+          <h2>{{ selected.season }} {{ selected.raceName }}</h2>
+          <p>{{ selected.Circuit.circuitName }}</p>
+        }
+      </div>
+      <div class="race-layout">
+        @if (race(); as selected) {
+          <app-circuit-layout
+            [circuitId]="selected.Circuit.circuitId"
+            [circuitName]="selected.Circuit.circuitName"
+            [season]="selected.season"
+            [round]="selected.round"></app-circuit-layout>
+        }
+      </div>
+      <div class="race-location">
+        @if (race(); as selected) {
+          @if (visibleFlag() !== flagUrl()) {
             <img
-              [src]="this.getImagePath(race.Circuit.Location.country)"
-              [alt]="race.Circuit.Location.country + ' flag'"
+              [src]="flagUrl()"
+              [alt]="selected.Circuit.Location.country + ' flag'"
               width="48"
               height="32"
-              (error)="$any($event.target).style.display = 'none'" />
-            <!-- <span class="font-bold">{{race.Circuit.Location.country}} Flag</span> -->
+              (error)="hideFlag(flagUrl())" />
           }
+          <h2>
+            {{ selected.Circuit.Location.locality }},
+            {{ selected.Circuit.Location.country }}
+          </h2>
+          <p>Date: {{ selected.date }}</p>
         }
-      </ng-template>
-
-      <!-- Content template -->
-      @for (
-        race of this.f1ApiService.f1Rounds()?.MRData?.RaceTable?.Races;
-        track $index
-      ) {
-        @if (race.round === this.f1ApiService.selectedRound()) {
-          <!-- Grand Prix information section -->
-          <div class="grand-prix-info">
-            <!-- First column: Race and circuit details -->
-            <div>
-              <h1>{{ race.season }} {{ race.raceName }}</h1>
-              <h2>{{ race.Circuit.circuitName }}</h2>
-            </div>
-            <!-- Second column: Location and date details -->
-            <div>
-              <h1>
-                {{ race.Circuit.Location.locality }},{{
-                  race.Circuit.Location.country
-                }}
-              </h1>
-              <h2>Date: {{ race.date }}</h2>
-            </div>
-          </div>
-          <!-- {{race.url}} -->
-        }
-      }
-    </p-panel>
+      </div>
+    </section>
   `,
   styles: `
-    .grand-prix-info {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      font-size: 10px;
+    .race-information {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(180px, 320px) minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+      padding: 18px 28px;
+      background: #151414;
+      color: white;
     }
-
-    @media (max-width: 850px) {
-      .grand-prix-info {
-        font-size: 10px;
-        flex-direction: column;
-        gap: 10px;
+    .round-control {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin: 0 0 8px;
+      overflow-wrap: anywhere;
+    }
+    p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .race-location {
+      text-align: right;
+    }
+    .race-location img {
+      object-fit: contain;
+      margin-bottom: 22px;
+    }
+    .race-layout {
+      min-width: 0;
+    }
+    @media (max-width: 900px) {
+      .race-information {
+        grid-template-columns: minmax(0, 1fr) minmax(160px, 240px) minmax(
+            0,
+            1fr
+          );
+        padding: 20px;
+        gap: 16px;
+      }
+    }
+    @media (max-width: 650px) {
+      .race-information {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+      .race-location {
+        text-align: left;
+      }
+      .race-location img {
+        margin-bottom: 12px;
+      }
+      .round-control {
+        margin-bottom: 16px;
       }
     }
   `
 })
 export class RoundTemplateComponent {
-  selectedRound = this.f1ApiService.selectedRound();
+  readonly rounds = computed(
+    () => this.f1ApiService.f1Rounds()?.MRData?.RaceTable.Races ?? []
+  );
+  readonly race = computed(() =>
+    this.rounds().find(race => race.round === this.f1ApiService.selectedRound())
+  );
+  readonly flagUrl = computed(() => {
+    const country = this.race()?.Circuit.Location.country;
+    return country ? `assets/flags/${country}.webp` : '';
+  });
+  private failedFlag = '';
 
   constructor(public f1ApiService: F1ApiService) {}
 
-  getImagePath(name: string): string {
-    return `assets/flags/${name}.webp`;
+  /** Preserve the text location when an optional country flag is unavailable. */
+  visibleFlag(): string {
+    return this.failedFlag;
+  }
+  hideFlag(url: string): void {
+    this.failedFlag = url;
   }
 }
 

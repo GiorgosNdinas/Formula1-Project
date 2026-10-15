@@ -32,6 +32,10 @@ jobs:
         run: npm ci
       - name: Refresh licensed external driver photos
         run: npm run photos:prepare
+      - name: Refresh verified external circuit layouts
+        run: npm run circuits:prepare
+      - name: Verify circuit matching and SVG policy
+        run: npm run circuits:test
       - name: Build production website
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}

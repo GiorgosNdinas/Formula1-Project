@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "albert_park-commons-infobox",
+      "circuitId": "albert_park",
+      "circuitName": "Albert Park Grand Prix Circuit",
+      "commonsFile": "Circuit Albert Park 1996 infobox.svg",
+      "seasonRanges": [
+        {
+          "from": 1996,
+          "to": 2019
+        }
+      ],
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Albert_Park_1996_infobox.svg",
+        "https://www.formula1.com/en/latest/article/must-see-ride-onboard-with-the-safety-car-to-check-out-the-albert-park-track.7qtSFARvV2ZMOwTFqT05gj"
+      ],
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "bahrain-commons-infobox",
+      "circuitId": "bahrain",
+      "circuitName": "Bahrain International Circuit",
+      "commonsFile": "Circuit Bahrain 2004 Infobox.svg",
+      "seasonRanges": [
+        {
+          "from": 2004,
+          "to": 2009
+        },
+        {
+          "from": 2012,
+          "to": 2026
+        }
+      ],
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Bahrain_2004_Infobox.svg"
+      ],
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "catalunya-commons-infobox",
+      "circuitId": "catalunya",
+      "circuitName": "Circuit de Barcelona-Catalunya",
+      "commonsFile": "Circuit Catalunya 2007 Infobox.svg",
+      "seasonRanges": [
+        {
+          "from": 2007,
+          "to": 2020
+        }
+      ],
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Catalunya_2007_Infobox.svg",
+        "https://www.formula1.com/en/latest/article/circuit-de-barcelona-catalunya-complete-remodelling-of-turn-10.giY8HxbKVmtub2ZjyvI1B"
+      ],
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "hockenheimring-commons-infobox",
+      "circuitId": "hockenheimring",
+      "circuitName": "Hockenheimring",
+      "commonsFile": "Circuit Hockenheim 2002 infobox.svg",
+      "seasonRanges": [
+        {
+          "from": 2002,
+          "to": 2019
+        }
+      ],
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Hockenheim_2002_infobox.svg"
+      ],
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "monaco-commons-infobox",
+      "circuitId": "monaco",
+      "circuitName": "Circuit de Monaco",
+      "commonsFile": "Circuit Monaco 2003 infobox.svg",
+      "seasonRanges": [
+        {
+          "from": 2003,
+          "to": 2014
+        }
+      ],
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Monaco_2003_infobox.svg"
+      ],
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "sepang-commons-infobox",
+      "circuitId": "sepang",
+      "circuitName": "Sepang International Circuit",
+      "commonsFile": "Circuit Sepang 1999 Infobox.svg",
+      "seasonRanges": [
+        {
+          "from": 1999,
+          "to": 2015
+        }
+      ],
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Sepang_1999_Infobox.svg"
+      ],
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "silverstone-commons-infobox",
+      "circuitId": "silverstone",
+      "circuitName": "Silverstone Circuit",
+      "commonsFile": "Circuit Silverstone 2010 infobox.svg",
+      "seasonRanges": [
+        {
+          "from": 2010,
+          "to": 2010
+        }
+      ],
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Silverstone_2010_infobox.svg"
+      ],
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "valencia-commons-infobox",
+      "circuitId": "valencia",
+      "circuitName": "Valencia Street Circuit",
+      "commonsFile": "Circuit Valencia 2008 Infobox.svg",
+      "seasonRanges": [
+        {
+          "from": 2008,
+          "to": 2012
+        }
+      ],
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Valencia_2008_Infobox.svg"
+      ],
+      "presentation": "white-silhouette"
+    }
+  ],
+  "exceptions": [
+    {
+      "circuitId": "bahrain",
+      "season": 2020,
+      "round": 16,
+      "reason": "Sakhir used the Outer Circuit; the normal Grand Prix outline must not be shown.",
+      "evidenceUrl": "https://www.formula1.com/en/racing/2020/sakhir"
+    }
+  ],
+  "pendingSources": [
+    {
+      "repository": "MasterPlay007/F1-Track-Layouts-SVG",
+      "commit": "afe9e591e27f3798a99c0aa0c0d90ba8f83788d6",
+      "license": "CC0-1.0",
+      "status": "pending-provenance-and-season-review",
+      "reason": "Repository license is explicit, but individual SVG provenance and historical configurations are not documented. Do not auto-approve these files."
+    }
+  ]
+}

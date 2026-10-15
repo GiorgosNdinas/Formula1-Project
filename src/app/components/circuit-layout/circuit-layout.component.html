@@ -1,0 +1,36 @@
+<figure
+  class="circuit-layout"
+  [attr.aria-busy]="loading()">
+  @for (entry of image(); track entry.svgUrl) {
+    <img
+      class="track-outline"
+      [class.pending]="loading()"
+      [src]="entry.svgUrl"
+      [alt]="circuitName + ' circuit layout, ' + seasonLabel()"
+      [width]="entry.width"
+      [height]="entry.height"
+      decoding="async"
+      (load)="loaded(entry.svgUrl)"
+      (error)="failed(entry.svgUrl)" />
+    @if (loading()) {
+      <span
+        class="loading"
+        role="status">
+        Loading circuit layout…
+      </span>
+    }
+  } @empty {
+    <div
+      class="placeholder"
+      role="img"
+      [attr.aria-label]="circuitName + ': verified layout unavailable'">
+      <span
+        class="placeholder-mark"
+        aria-hidden="true">
+        ◇
+      </span>
+      <span>{{ circuitName }}</span>
+      <small>Layout unavailable</small>
+    </div>
+  }
+</figure>

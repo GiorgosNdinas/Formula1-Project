@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "albert_park-commons-infobox",
+      "circuitId": "albert_park",
+      "circuitName": "Albert Park Grand Prix Circuit",
+      "seasonRanges": [
+        {
+          "from": 1996,
+          "to": 2019
+        }
+      ],
+      "svgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Circuit_Albert_Park_1996_infobox.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Albert_Park_1996_infobox.svg",
+      "license": "CC0-1.0",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Albert_Park_1996_infobox.svg",
+      "attributionRequired": false,
+      "author": "AlexJ",
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Albert_Park_1996_infobox.svg",
+        "https://www.formula1.com/en/latest/article/must-see-ride-onboard-with-the-safety-car-to-check-out-the-albert-park-track.7qtSFARvV2ZMOwTFqT05gj"
+      ],
+      "verifiedAt": "2026-10-15T14:01:43.167Z",
+      "sha256": "e0e2fff18662a7970683015962f3f49df9e44089d6c6a33ca71727a018b2b538",
+      "reviewKey": "fc8da27edb52d90aad9f00d5c00e7b21e1322f38dd6aa8c18ba2d743a9930065",
+      "width": 800,
+      "height": 600,
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "bahrain-commons-infobox",
+      "circuitId": "bahrain",
+      "circuitName": "Bahrain International Circuit",
+      "seasonRanges": [
+        {
+          "from": 2004,
+          "to": 2009
+        },
+        {
+          "from": 2012,
+          "to": 2026
+        }
+      ],
+      "svgUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Circuit_Bahrain_2004_Infobox.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Bahrain_2004_Infobox.svg",
+      "license": "CC0-1.0",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Bahrain_2004_Infobox.svg",
+      "attributionRequired": false,
+      "author": "AlexJ",
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Bahrain_2004_Infobox.svg"
+      ],
+      "verifiedAt": "2026-10-15T14:01:44.221Z",
+      "sha256": "2da7a9a61d9a8037aeef995ad8d6b8158e0b703ab4db025cef74f2619d3d6bf9",
+      "reviewKey": "0e13f263b70cd6735979f21380da253cf933e6fd35813c6810c236a0e2092f49",
+      "width": 800,
+      "height": 600,
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "catalunya-commons-infobox",
+      "circuitId": "catalunya",
+      "circuitName": "Circuit de Barcelona-Catalunya",
+      "seasonRanges": [
+        {
+          "from": 2007,
+          "to": 2020
+        }
+      ],
+      "svgUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Circuit_Catalunya_2007_Infobox.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Catalunya_2007_Infobox.svg",
+      "license": "CC0-1.0",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Catalunya_2007_Infobox.svg",
+      "attributionRequired": false,
+      "author": "AlexJ",
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Catalunya_2007_Infobox.svg",
+        "https://www.formula1.com/en/latest/article/circuit-de-barcelona-catalunya-complete-remodelling-of-turn-10.giY8HxbKVmtub2ZjyvI1B"
+      ],
+      "verifiedAt": "2026-10-15T14:01:45.258Z",
+      "sha256": "c07c69b64875b54a2b3e377d1032bb89601b1315f539b7ee38ccaa2c58c8dbbb",
+      "reviewKey": "351fc51ad0a7e4e0b54f489f44a6e93e9ea679ed201cab8a81600416e2e00d4d",
+      "width": 800,
+      "height": 600,
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "hockenheimring-commons-infobox",
+      "circuitId": "hockenheimring",
+      "circuitName": "Hockenheimring",
+      "seasonRanges": [
+        {
+          "from": 2002,
+          "to": 2019
+        }
+      ],
+      "svgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Circuit_Hockenheim_2002_infobox.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Hockenheim_2002_infobox.svg",
+      "license": "CC0-1.0",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Hockenheim_2002_infobox.svg",
+      "attributionRequired": false,
+      "author": "AlexJ",
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Hockenheim_2002_infobox.svg"
+      ],
+      "verifiedAt": "2026-10-15T14:01:46.305Z",
+      "sha256": "cb03ece4b3c02920a18fb476ce84c0a9100de72b52f529abac6323b3f553cf26",
+      "reviewKey": "e4d830b37560940b24c8162889f060b6c185dd01a17941006b93beb33271a6b8",
+      "width": 800,
+      "height": 600,
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "monaco-commons-infobox",
+      "circuitId": "monaco",
+      "circuitName": "Circuit de Monaco",
+      "seasonRanges": [
+        {
+          "from": 2003,
+          "to": 2014
+        }
+      ],
+      "svgUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Circuit_Monaco_2003_infobox.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Monaco_2003_infobox.svg",
+      "license": "CC0-1.0",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Monaco_2003_infobox.svg",
+      "attributionRequired": false,
+      "author": "AlexJ",
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Monaco_2003_infobox.svg"
+      ],
+      "verifiedAt": "2026-10-15T14:01:47.306Z",
+      "sha256": "1c8e6da321ad45dfeb0747adade19cf2c645a48d05381b762e73f3e976365b46",
+      "reviewKey": "d1c5d20d69f2c6c0f388b0468274da2e4145ab242a58516aaee0e706d60b8f34",
+      "width": 800,
+      "height": 600,
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "sepang-commons-infobox",
+      "circuitId": "sepang",
+      "circuitName": "Sepang International Circuit",
+      "seasonRanges": [
+        {
+          "from": 1999,
+          "to": 2015
+        }
+      ],
+      "svgUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Circuit_Sepang_1999_Infobox.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Sepang_1999_Infobox.svg",
+      "license": "CC0-1.0",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Sepang_1999_Infobox.svg",
+      "attributionRequired": false,
+      "author": "AlexJ",
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Sepang_1999_Infobox.svg"
+      ],
+      "verifiedAt": "2026-10-15T14:01:48.329Z",
+      "sha256": "759f74bd4dbcfe80b2fe2746241ec2431265fe29581d668dcb255c9a969afee2",
+      "reviewKey": "fcbed718b9696452eb80527012f898039fe377f75291bbf9736b305ea5e0f58d",
+      "width": 800,
+      "height": 600,
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "silverstone-commons-infobox",
+      "circuitId": "silverstone",
+      "circuitName": "Silverstone Circuit",
+      "seasonRanges": [
+        {
+          "from": 2010,
+          "to": 2010
+        }
+      ],
+      "svgUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Circuit_Silverstone_2010_infobox.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Silverstone_2010_infobox.svg",
+      "license": "CC0-1.0",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Silverstone_2010_infobox.svg",
+      "attributionRequired": false,
+      "author": "AlexJ",
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Silverstone_2010_infobox.svg"
+      ],
+      "verifiedAt": "2026-10-15T14:01:49.349Z",
+      "sha256": "97ebbb0c2c1b0fb4f5147e6466e3178dbda9264d0e3589d3e9012fa90f22d7b6",
+      "reviewKey": "514701c52ebc17247feb215b4b066b198fd5c06ea3515dfd3e6abfc282baf1a9",
+      "width": 800,
+      "height": 600,
+      "presentation": "white-silhouette"
+    },
+    {
+      "id": "valencia-commons-infobox",
+      "circuitId": "valencia",
+      "circuitName": "Valencia Street Circuit",
+      "seasonRanges": [
+        {
+          "from": 2008,
+          "to": 2012
+        }
+      ],
+      "svgUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Circuit_Valencia_2008_Infobox.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Valencia_2008_Infobox.svg",
+      "license": "CC0-1.0",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Valencia_2008_Infobox.svg",
+      "attributionRequired": false,
+      "author": "AlexJ",
+      "provenance": "Commons file declares CC0, identifies AlexJ as author and Own work as source. Low-detail infobox SVG inspected for labels and embedded images.",
+      "configurationEvidenceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Circuit_Valencia_2008_Infobox.svg"
+      ],
+      "verifiedAt": "2026-10-15T14:01:50.371Z",
+      "sha256": "d09de8bcaa81a332417e08bf31effbd60318ea7299fd7dd7d059596baada01b7",
+      "reviewKey": "095be29165b0b230a81282a17f94f6d07bcd84419027ab90f6793b1b04d69019",
+      "width": 800,
+      "height": 600,
+      "presentation": "white-silhouette"
+    }
+  ],
+  "exceptions": [
+    {
+      "circuitId": "bahrain",
+      "season": 2020,
+      "round": 16,
+      "reason": "Sakhir used the Outer Circuit; the normal Grand Prix outline must not be shown.",
+      "evidenceUrl": "https://www.formula1.com/en/racing/2020/sakhir"
+    }
+  ]
+}
