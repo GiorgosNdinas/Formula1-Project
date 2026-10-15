@@ -83,7 +83,6 @@ import { Results } from '../../models/f1-race-results.model';
       </div>
     }
   `,
-  styleUrl: './table.component.scss'
 })
 export class TableComponent {
   // Input decorator to define a property binding for the 'tableFor' variable.
